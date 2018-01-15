@@ -1,0 +1,39 @@
+{
+    "questions": [
+ 
+        {
+            "flashCardFront": "<img src='assets/imgs/jupiter-surface.jpg' />",
+            "flashCardBack": "Jupiter",
+            "flashCardFlipped": false,
+            "questionText": "What planet is this?",
+            "answers": [
+                {"answer": "Saturn", "correct": false, "selected": false},
+                {"answer": "Neptune", "correct": false, "selected": false},
+                {"answer": "Jupiter", "correct": true, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "<img src='assets/imgs/mars-surface.jpg' />",
+            "flashCardBack": "Mars",
+            "flashCardFlipped": false,
+            "questionText": "What planet is this?",
+            "answers": [
+                {"answer": "Mars", "correct": true, "selected": false},
+                {"answer": "Venus", "correct": false, "selected": false},
+                {"answer": "Earth", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "<img src='assets/imgs/venus-surface.jpg' />",
+            "flashCardBack": "Venus",
+            "flashCardFlipped": false,
+            "questionText": "What planet is this?",
+            "answers": [
+                {"answer": "Mercury", "correct": false, "selected": false},
+                {"answer": "Venus", "correct": true, "selected": false},
+                {"answer": "Saturn", "correct": false, "selected": false}
+            ]
+        }
+ 
+    ]
+}
