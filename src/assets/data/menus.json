@@ -1,0 +1,40 @@
+[
+  {
+    "category":"Aprende", "icon": "book",
+    "subs": [
+      {
+        "subcategory":"Ciencia", "icon": "planet",
+        "matters": [
+          {
+            "matter":"Planetas", "component": "Planets", "icon": "planet"
+          },
+          {
+            "matter":"Estrellas", "componen": "Planets", "icon": "star"
+          }
+        ]
+      },
+      {
+          "subcategory":"Matemáticas", "icon": "calculator", 
+        "matters": [
+          {
+            "matter":"Planetas", "component": "Planets"
+          },
+          {
+            "matter":"Estrellas", "componen": "Planets"
+          }
+        ]
+        }
+    ]
+  },
+  {
+    "category":"Juega", "icon": "trophy",
+    "subs": [
+      {
+        "subcategory":"Quiz", "component": "Quiz", "icon": "help"
+      },
+      {
+        "subcategory":"Verdadero / Falso", "component": "Quiz", "icon": "clipboard"
+      }
+    ]
+  }
+]

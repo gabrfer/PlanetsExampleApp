@@ -20,6 +20,10 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+import { MenuPage } from '../pages/menu/menu';
+import { MenuProvider } from '../providers/menu/menu';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyClU8HlHob8iRg5FDNHleDm-0HqsYj3Mtw",
@@ -37,7 +41,9 @@ export const firebaseConfig = {
     ContactPage,
     QuizPage,
     HomePage,
+    MenuPage,
     TabsPage,
+    SignupPage,
     FlashCardComponent,
     ExpandableComponent
   ],
@@ -57,14 +63,17 @@ export const firebaseConfig = {
     ContactPage,
     HomePage,
     QuizPage,
-    TabsPage
+    TabsPage,
+    SignupPage,
+    MenuPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataProvider,
-    AuthProvider
+    AuthProvider,
+    MenuProvider
   ]
 })
 export class AppModule {}

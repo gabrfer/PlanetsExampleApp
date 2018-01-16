@@ -14,3 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.icon-left {
+    font-size: 26px; // Your size here
+    vertical-align: middle;
+  }
+
+.icon-right {
+    vertical-align: middle;
+}
+
+.text{
+    display: inline-block;
+    vertical-align: middle;
+}

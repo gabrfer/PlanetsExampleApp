@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>
+      Flash Cards
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col col-12 col-xs-12 col-sm-6 col-md-4 col-xl-3 (click)="expandItem(item)" *ngFor="let item of items">
+          <ion-card>
+              <img src={{item.img}} height="200"/>
+              <ion-card-content>
+                  <ion-card-title>{{item.name}}</ion-card-title>   
+                  <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+                        <br>
+                        <ion-list>
+                         <p>{{item.radius}}</p>
+                         <p>{{item.radiusRelativeEarth}}</p>
+                         <p>{{item.sizeRelativeEarthText}}</p>
+                         <p>{{item.numSatellites}}</p>
+                        </ion-list>
+                  </expandable>                    
+              </ion-card-content>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+ 
+</ion-content>
