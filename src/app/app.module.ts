@@ -23,7 +23,9 @@ import { AuthProvider } from '../providers/auth/auth';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { MenuPage } from '../pages/menu/menu';
+import { PlanetsPage } from '../pages/planets/planets';
 import { MenuProvider } from '../providers/menu/menu';
+import { QuizYesnoPage } from '../pages/quiz-yesno/quiz-yesno';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyClU8HlHob8iRg5FDNHleDm-0HqsYj3Mtw",
@@ -40,10 +42,12 @@ export const firebaseConfig = {
     AboutPage,
     ContactPage,
     QuizPage,
+    QuizYesnoPage,
     HomePage,
     MenuPage,
     TabsPage,
     SignupPage,
+    PlanetsPage,
     FlashCardComponent,
     ExpandableComponent
   ],
@@ -63,6 +67,7 @@ export const firebaseConfig = {
     ContactPage,
     HomePage,
     QuizPage,
+    QuizYesnoPage,
     TabsPage,
     SignupPage,
     MenuPage

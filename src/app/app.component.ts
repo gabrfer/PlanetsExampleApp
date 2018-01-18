@@ -6,8 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { PlanetsPage } from '../pages/planets/planets';
 import { QuizPage } from '../pages/quiz/quiz';
-import { AuthProvider } from '../providers/auth/auth';
 
+import { AuthProvider } from '../providers/auth/auth';
 import { MenuProvider } from '../providers/menu/menu';
 import { DataProvider } from '../providers/data/data';
 
@@ -64,7 +64,8 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    let pageObject = this.menuProvider.getNotLazyComponent(page);
+    this.nav.setRoot(pageObject);
   }
 
   toggleLevel1(idx) {
@@ -75,13 +76,17 @@ export class MyApp {
     }
   };
   
-  toggleLevel2(idx) {
-    if (this.isLevel2Shown(idx)) {
-      this.showLevel1 = null;
-      this.showLevel2 = null;
-    } else {
-      this.showLevel1 = idx;
-      this.showLevel2 = idx;
+  toggleLevel2(idx, page) {
+    if (page) {
+      this.openPage(page);
+    }else {
+      if (this.isLevel2Shown(idx)) {
+        this.showLevel1 = null;
+        this.showLevel2 = null;
+      } else {
+        this.showLevel1 = idx;
+        this.showLevel2 = idx;
+      }
     }
   };
 

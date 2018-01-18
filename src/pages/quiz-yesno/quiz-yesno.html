@@ -13,17 +13,12 @@
 
           <h3>{{question.questionText}}</h3>
 
-          <ion-list no-lines radio-group>
-
-              <ion-item *ngFor="let answer of question.answers; let i = index;" [color]="answer.color">
-
-                  <ion-label>{{i+1}}. {{answer.answer}}</ion-label>
-                  <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio>
-
-              </ion-item>
-
-          </ion-list>
-
+          <ion-grid>
+              <ion-row>
+                <ion-col col-6><ion-icon item-start name="checkmark-circle"></ion-icon></ion-col>
+                <ion-col col-6><ion-icon item-start name="close-circle"></ion-icon></ion-col>
+              </ion-row>
+          </ion-grid>               
       </ion-slide>
 
       <ion-slide>

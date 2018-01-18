@@ -3,24 +3,24 @@
     "category":"Aprende", "icon": "book",
     "subs": [
       {
-        "subcategory":"Ciencia", "icon": "planet",
-        "matters": [
+        "subcategory":"Ciencia", "icon": "planet", "hasChilds": "true",
+        "childs": [
           {
-            "matter":"Planetas", "component": "Planets", "icon": "planet"
+            "child":"Planetas", "component": "PlanetsPage", "icon": "planet"
           },
           {
-            "matter":"Estrellas", "componen": "Planets", "icon": "star"
+            "child":"Estrellas", "component": "PlanetsPage", "icon": "star"
           }
         ]
       },
       {
-          "subcategory":"Matemáticas", "icon": "calculator", 
-        "matters": [
+          "subcategory":"Matemáticas", "icon": "calculator", "hasChilds": "true",
+        "childs": [
           {
-            "matter":"Planetas", "component": "Planets"
+            "child":"Planetas", "component": "PlanetsPage"
           },
           {
-            "matter":"Estrellas", "componen": "Planets"
+            "child":"Estrellas", "component": "PlanetsPage"
           }
         ]
         }
@@ -30,10 +30,10 @@
     "category":"Juega", "icon": "trophy",
     "subs": [
       {
-        "subcategory":"Quiz", "component": "Quiz", "icon": "help"
+        "subcategory":"Quiz", "component": "QuizPage", "icon": "help", "hasChilds": "false"
       },
       {
-        "subcategory":"Verdadero / Falso", "component": "Quiz", "icon": "clipboard"
+        "subcategory":"Verdadero / Falso", "component": "QuizYesnoPage", "icon": "clipboard", "hasChilds": "false"
       }
     ]
   }

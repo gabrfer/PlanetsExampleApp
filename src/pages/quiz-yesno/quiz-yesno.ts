@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
+
 /**
- * Generated class for the QuizPage page.
+ * Generated class for the QuizYesnoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,10 +11,10 @@ import { DataProvider } from '../../providers/data/data';
 
 @IonicPage()
 @Component({
-  selector: 'page-quiz',
-  templateUrl: 'quiz.html',
+  selector: 'page-quiz-yesno',
+  templateUrl: 'quiz-yesno.html',
 })
-export class QuizPage {
+export class QuizYesnoPage {
 
   @ViewChild('slides') slides: any;
 
@@ -39,7 +40,7 @@ export class QuizPage {
     
     this.slides.lockSwipes(true);
 
-    this.dataService.load().then(data => {
+    this.dataService.loadYesNo().then(data => {
 
       let i = 0;
 

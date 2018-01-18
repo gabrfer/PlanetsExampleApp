@@ -1,8 +1,7 @@
 {
     "questions": [
- 
         {
-            "flashCardFront": "<img src='assets/imgs/jupiter-surface.jpg' />",
+            "flashCardFront": "<img src='http://placehold.it/200x200' />",
             "flashCardBack": "Jupiter",
             "flashCardFlipped": false,
             "questionText": "What planet is this?",
@@ -13,7 +12,7 @@
             ]
         },
         {
-            "flashCardFront": "<img src='assets/imgs/mars-surface.jpg' />",
+            "flashCardFront": "<img src='http://placehold.it/200x200' />",
             "flashCardBack": "Mars",
             "flashCardFlipped": false,
             "questionText": "What planet is this?",
@@ -24,7 +23,7 @@
             ]
         },
         {
-            "flashCardFront": "<img src='assets/imgs/venus-surface.jpg' />",
+            "flashCardFront": "<img src='http://placehold.it/200x200' />",
             "flashCardBack": "Venus",
             "flashCardFlipped": false,
             "questionText": "What planet is this?",
@@ -34,6 +33,5 @@
                 {"answer": "Saturn", "correct": false, "selected": false, "color": "answer"}
             ]
         }
- 
     ]
 }

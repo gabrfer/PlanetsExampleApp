@@ -1,5 +1,6 @@
 import { Component, Input, ViewChild, ElementRef, Renderer } from '@angular/core';
 
+
 /**
  * Generated class for the ExpandableComponent component.
  *

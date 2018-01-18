@@ -35,4 +35,23 @@ export class DataProvider {
     });
   }
 
+  loadYesNo(){
+
+    if(this.data){
+      return Promise.resolve(this.data);
+    }
+
+    return new Promise(resolve => {
+
+      this.http.get('assets/data/questionsYesNo.json')
+      .subscribe(data => { 
+        this.data = data;
+        resolve(this.data);
+      }, err => {
+        console.log(err);
+      });
+
+    });
+  }
+
 }

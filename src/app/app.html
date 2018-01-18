@@ -5,15 +5,6 @@
           </ion-toolbar>
         </ion-header>
       
-<!--         <ion-content>
-          <ion-list>
-            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-              <ion-icon [name]="p.icon" item-left></ion-icon>
-              {{ p.title }}
-            </button>
-          </ion-list>
-        </ion-content> -->
-
         <ion-content>
             <ion-list>
               <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngClass]="{active: isLevel1Shown('idx'+i)}">
@@ -23,16 +14,16 @@
                   <ion-icon class="icon-right" color="success" item-right [name]="isLevel1Shown('idx'+i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
                 </h4>
                 <ion-list *ngIf="isLevel1Shown('idx'+i)">
-                  <ion-item *ngFor="let s of p.subs; let i2=index" text-wrap (click)="toggleLevel2('idx'+i+'idx'+i2)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">                    
+                  <ion-item *ngFor="let s of p.subs; let i2=index" text-wrap (click)="toggleLevel2('idx'+i+'idx'+i2, s.component)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">                    
                     <h4>
                       <ion-icon class="icon-left" [name]="s.icon" item-left></ion-icon>
                         <span class="text">{{s.subcategory}}</span>
-                      <ion-icon class="icon-right" color="success" item-right [name]="isLevel2Shown('idx'+i+'idx'+i2) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+                      <ion-icon class="icon-right" color="success"  *ngIf="s.hasChilds=='true'" item-right [name]="isLevel2Shown('idx'+i+'idx'+i2) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
                     </h4>
                     <ion-list *ngIf="isLevel2Shown('idx'+i+'idx'+i2)">
-                      <ion-item *ngFor="let m of s.matters" (click)="openPage(m.component)" text-wrap>
+                      <ion-item *ngFor="let m of s.childs" (click)="openPage(m.component)" text-wrap>
                         <ion-icon class="icon-left" [name]="m.icon" item-left></ion-icon>
-                          <span class="text">{{m.matter}}</span>
+                          <span class="text">{{m.child}}</span>
                       </ion-item>
                     </ion-list>
                   </ion-item>
