@@ -9,7 +9,6 @@ import { DataProvider } from '../../providers/data/data';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-quiz-yesno',
   templateUrl: 'quiz-yesno.html',
@@ -17,6 +16,8 @@ import { DataProvider } from '../../providers/data/data';
 export class QuizYesnoPage {
 
   @ViewChild('slides') slides: any;
+
+  initConfirmed: string = "0";
 
   hasAnswered: boolean = false;
   score: number = 0;
@@ -36,8 +37,15 @@ export class QuizYesnoPage {
     this.answerOriginalColor = 'answerSelected';
   }
 
-  ionViewDidLoad() {
-    
+  confirmInit() {
+    this.initConfirmed = "1";
+
+    setTimeout(() => {
+      this.initSlideComponent();
+    },1000);
+  }
+
+  initSlideComponent(){
     this.slides.lockSwipes(true);
 
     this.dataService.loadYesNo().then(data => {
@@ -53,6 +61,10 @@ export class QuizYesnoPage {
 
       this.questions = data.questions;
     })
+  }
+
+  ionViewDidLoad() {
+    //this.initSlideComponent();
   }
 
   nextSlide(){

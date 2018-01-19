@@ -20,12 +20,14 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
+import { IonicStorageModule } from '@ionic/storage';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { MenuPage } from '../pages/menu/menu';
 import { PlanetsPage } from '../pages/planets/planets';
 import { MenuProvider } from '../providers/menu/menu';
 import { QuizYesnoPage } from '../pages/quiz-yesno/quiz-yesno';
+import { QuizPointsProvider } from '../providers/quiz-points/quiz-points';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyClU8HlHob8iRg5FDNHleDm-0HqsYj3Mtw",
@@ -55,6 +57,7 @@ export const firebaseConfig = {
     BrowserModule,
     HttpClientModule,
     HttpModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
@@ -78,7 +81,8 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataProvider,
     AuthProvider,
-    MenuProvider
+    MenuProvider,
+    QuizPointsProvider
   ]
 })
 export class AppModule {}

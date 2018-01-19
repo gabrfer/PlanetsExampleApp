@@ -4,7 +4,6 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AuthProvider } from '../../providers/auth/auth';
 import { IonicPage } from 'ionic-angular/navigation/ionic-page';
 
-@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

@@ -1,7 +1,8 @@
 {
-    "idQuiz": 1,
-    "name": "quizPlanets",
+    "idQuiz": 2,
+    "name": "quizStars",
     "questions": [
+ 
         {
             "flashCardFront": "<img src='assets/imgs/jupiter-surface.jpg' />",
             "flashCardBack": "Jupiter",

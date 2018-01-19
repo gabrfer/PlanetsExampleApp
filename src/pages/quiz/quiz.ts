@@ -1,14 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
-/**
- * Generated class for the QuizPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { QuizPointsProvider } from '../../providers/quiz-points/quiz-points';
 
-@IonicPage()
 @Component({
   selector: 'page-quiz',
   templateUrl: 'quiz.html',
@@ -22,13 +16,15 @@ export class QuizPage {
 
   slideOptions: any;
   questions: any;
+  idQuiz: 0;
 
   private answerOriginalColor: string = 'answer';
   private answerSelectedColor: string = 'answerSelected';
   private answerCorrectColor: string = 'answerCorrect';
   private answerIncorrectColor: string = 'answerIncorrect';
 
-  constructor(public navCtrl: NavController, public dataService: DataProvider) {
+  constructor(public navCtrl: NavController, public dataService: DataProvider, 
+              public quizPointsProvider: QuizPointsProvider) {
   }
 
   toggleAnswerColor() {
@@ -51,6 +47,7 @@ export class QuizPage {
       });
 
       this.questions = data.questions;
+      this.idQuiz = data.idQuiz;
     })
   }
 
@@ -94,6 +91,9 @@ export class QuizPage {
   }
 
   restartQuiz() {
+
+    this.quizPointsProvider.addPoints(this.score, this.idQuiz);
+
     this.score = 0;
     this.slides.lockSwipes(false);
     this.slides.slideTo(0, 1000);

@@ -1,4 +1,6 @@
 {
+    "idQuiz": 1,
+    "name": "quizPlanets",
     "questions": [
         {
             "flashCardFront": "<img src='http://placehold.it/200x200' />",

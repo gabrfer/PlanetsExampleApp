@@ -67,14 +67,7 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     let pageObject = this.menuProvider.getNotLazyComponent(page);
-    this.nav.setRoot(HomePage);
-
-
-
-    this.nav.setRoot('HomePage');
-
-
-    
+    this.nav.setRoot(pageObject);
   }
 
   toggleLevel1(idx) {
