@@ -28,6 +28,7 @@ import { PlanetsPage } from '../pages/planets/planets';
 import { MenuProvider } from '../providers/menu/menu';
 import { QuizYesnoPage } from '../pages/quiz-yesno/quiz-yesno';
 import { QuizPointsProvider } from '../providers/quiz-points/quiz-points';
+import { StarsPage } from '../pages/stars/stars';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyClU8HlHob8iRg5FDNHleDm-0HqsYj3Mtw",
@@ -50,6 +51,7 @@ export const firebaseConfig = {
     TabsPage,
     SignupPage,
     PlanetsPage,
+    StarsPage,
     FlashCardComponent,
     ExpandableComponent
   ],
@@ -73,7 +75,9 @@ export const firebaseConfig = {
     QuizYesnoPage,
     TabsPage,
     SignupPage,
-    MenuPage
+    MenuPage,
+    PlanetsPage,
+    StarsPage
   ],
   providers: [
     StatusBar,

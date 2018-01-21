@@ -1,6 +1,6 @@
 <ion-content>
  
-    <ion-list>
+<!--     <ion-list>
         <ion-item>
           <ion-label>Escoge la materia</ion-label>
           <ion-select [(ngModel)]="matter"  okText="Ok">
@@ -8,14 +8,14 @@
             <ion-option value="stars">Estrellas</ion-option>
           </ion-select>
         </ion-item>
-      </ion-list>
+      </ion-list> -->
 
       
   <ion-slides #slides>
 
       <ion-slide *ngFor="let question of questions; let i = index;">
 
-          <h3>Question {{i + 1}}</h3>
+          <h3>Pregunta {{i + 1}}</h3>
 
           <flash-card [isFlipped]="question.flashCardFlipped">
               <div class="flash-card-front" [innerHTML]="question.flashCardFront"></div>
@@ -26,11 +26,10 @@
 
           <ion-list no-lines radio-group>
 
-              <ion-item *ngFor="let answer of question.answers; let i = index;" [color]="answer.color">
-
+              <ion-item class="label-rounded" *ngFor="let answer of question.answers; let i = index;" [color]="answer.color">
+                  <ion-badge class="answer-badge" item-start>A</ion-badge>  
                   <ion-label>{{i+1}}. {{answer.answer}}</ion-label>
                   <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio>
-
               </ion-item>
 
           </ion-list>

@@ -10,6 +10,7 @@ import { QuizPage } from '../../pages/quiz/quiz';
 import { LoginPage } from '../../pages/login/login';
 import { SignupPage } from '../../pages/signup/signup';
 import { QuizYesnoPage } from '../../pages/quiz-yesno/quiz-yesno';
+import { StarsPage } from '../../pages/stars/stars';
 
 /*
   Generated class for the MenuServiceProvider provider.
@@ -39,6 +40,10 @@ export class MenuProvider {
       }
       case "PlanetsPage": {
         pageObject = PlanetsPage;
+        break;
+      }
+      case "StarsPage": {
+        pageObject = StarsPage;
         break;
       }
       case "QuizPage": {

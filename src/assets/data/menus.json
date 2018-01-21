@@ -9,7 +9,7 @@
             "child":"Planetas", "component": "PlanetsPage", "icon": "planet"
           },
           {
-            "child":"Estrellas", "component": "PlanetsPage", "icon": "star"
+            "child":"Estrellas", "component": "StarsPage", "icon": "star"
           }
         ]
       },
