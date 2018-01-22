@@ -1,15 +1,5 @@
 <ion-content>
  
-  <ion-list>
-    <ion-item>
-      <ion-label>Escoge la materia</ion-label>
-      <ion-select [(ngModel)]="matter"  okText="Ok">
-        <ion-option value="planets">Planetas</ion-option>
-        <ion-option value="stars">Estrellas</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-
   <button ion-button (click)="confirmInit()" *ngIf="initConfirmed=='0'">EMPEZAR</button>
 
   <ion-slides *ngIf="initConfirmed=='1'" #slides>
