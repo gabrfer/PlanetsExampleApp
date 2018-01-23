@@ -44,10 +44,13 @@ export class QuizPointsProvider {
     });
   }   
 
-  editPoints(puntuation, userId) {
-    this.db.object('/userPoints/'+userId+'/'+puntuation.key).update({
-      points: puntuation.points
-    })
+  editPoints(puntuation, quizCode) {
+    this.authProvider.getCurrentUser().subscribe(authState => {
+
+      this.db.object('/userPoints/'+authState.uid+"/"+quizCode).update({
+        puntuation
+      })
+    });
   }
 
 }

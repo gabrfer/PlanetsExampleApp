@@ -1,6 +1,6 @@
 {
     "idQuiz": 2,
-    "name": "quizStars",
+    "name": "quizStarsYesNo",
     "questions": [
         {
             "flashCardFront": "<img src='http://placehold.it/200x200' />",

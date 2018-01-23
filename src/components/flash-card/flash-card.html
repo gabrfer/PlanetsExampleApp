@@ -2,11 +2,11 @@
  
     <div class="flipper">
         <div class="front" #front> 
-            <ng-content select=".flash-card-front"></ng-content>
+            <ng-content class="front" select=".flash-card-front"></ng-content>
         </div>
 
         <div class="back" #back>
-            <ng-content select=".flash-card-back"></ng-content>
+            <ng-content class="back" select=".flash-card-back"></ng-content>
         </div>
     </div>
 </ion-card>

@@ -1,16 +1,21 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>   
+      </button>  
+      <ion-title>Home</ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="logOut()">
+          Logout
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
 <ion-content>
  
-<!--     <ion-list>
-        <ion-item>
-          <ion-label>Escoge la materia</ion-label>
-          <ion-select [(ngModel)]="matter"  okText="Ok">
-            <ion-option value="planets">Planetas</ion-option>
-            <ion-option value="stars">Estrellas</ion-option>
-          </ion-select>
-        </ion-item>
-      </ion-list> -->
+  <progress-bar [progress]="loadProgress"></progress-bar>
 
-      
   <ion-slides #slides>
 
       <ion-slide *ngFor="let question of questions; let i = index;">
@@ -22,14 +27,16 @@
               <div class="flash-card-back" [innerHTML]="question.flashCardBack"></div>
           </flash-card>
 
-          <h3>{{question.questionText}}</h3>
+          <!-- <h3>{{question.questionText}}</h3> -->
+          <h3>[Texto de la pregunta]</h3>
 
           <ion-list no-lines radio-group>
 
-              <ion-item class="label-rounded" *ngFor="let answer of question.answers; let i = index;" [color]="answer.color">
-                  <ion-badge class="answer-badge" item-start>A</ion-badge>  
-                  <ion-label>{{i+1}}. {{answer.answer}}</ion-label>
-                  <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio>
+              <ion-item class="label-rounded" *ngFor="let answer of question.answers; let i = index;" [color]="answer.color" style="height:8vh;">
+                  <ion-badge class="answer-badge" item-start>{{answer.letter}}</ion-badge>  
+                  <!-- <ion-label>{{i+1}}. {{answer.answer}}</ion-label> -->
+                  <ion-label (click)="selectAnswer(answer, question)">Respuesta número uno</ion-label>
+                  <!-- <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio> -->
               </ion-item>
 
           </ion-list>

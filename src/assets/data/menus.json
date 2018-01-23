@@ -1,40 +1,43 @@
 [
   {
-    "category":"Aprende", "icon": "book",
+    "category":"Aprende", "icon": "book", "menuClose": "right",
     "subs": [
       {
-        "subcategory":"Ciencia", "icon": "planet", "hasChilds": "true",
+        "subcategory":"Ciencia", "icon": "planet", "hasChilds": "true", "menuClose": "right",
         "childs": [
           {
-            "child":"Planetas", "component": "PlanetsPage", "icon": "planet"
+            "child":"Planetas", "component": "PlanetsPage", "icon": "planet", "hasChilds": "false", "menuClose": "left"
           },
           {
-            "child":"Estrellas", "component": "StarsPage", "icon": "star"
+            "child":"Estrellas", "component": "StarsPage", "icon": "star", "hasChilds": "false", "menuClose": "left"
           }
         ]
       },
       {
-          "subcategory":"Matemáticas", "icon": "calculator", "hasChilds": "true",
+          "subcategory":"Matemáticas", "icon": "calculator", "hasChilds": "true", "menuClose": "right",
         "childs": [
           {
-            "child":"Planetas", "component": "PlanetsPage"
+            "child":"Planetas", "component": "PlanetsPage", "hasChilds": "false", "menuClose": "left"
           },
           {
-            "child":"Estrellas", "component": "PlanetsPage"
+            "child":"Estrellas", "component": "PlanetsPage", "hasChilds": "false", "menuClose": "left"
           }
         ]
         }
     ]
   },
   {
-    "category":"Juega", "icon": "trophy",
+    "category":"Juega", "icon": "trophy", "menuClose": "right",
     "subs": [
       {
-        "subcategory":"Quiz", "component": "QuizPage", "icon": "help", "hasChilds": "false"
+        "subcategory":"Quiz", "component": "QuizPage", "icon": "help", "hasChilds": "false", "menuClose": "left"
       },
       {
-        "subcategory":"Verdadero / Falso", "component": "QuizYesnoPage", "icon": "clipboard", "hasChilds": "false"
+        "subcategory":"Verdadero / Falso", "component": "QuizYesnoPage", "icon": "clipboard", "hasChilds": "false", "menuClose": "left"
       }
     ]
+  },
+  {
+    "category":"Clasificaciones", "component": "TabsPage", "icon": "trophy", "hasChilds": "false", "menuClose": "left"
   }
 ]

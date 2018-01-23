@@ -29,6 +29,9 @@ import { MenuProvider } from '../providers/menu/menu';
 import { QuizYesnoPage } from '../pages/quiz-yesno/quiz-yesno';
 import { QuizPointsProvider } from '../providers/quiz-points/quiz-points';
 import { StarsPage } from '../pages/stars/stars';
+import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
+import { QuizUserHistoryPage } from '../pages/quiz-user-history/quiz-user-history';
+import { QuizTopUsersPage } from '../pages/quiz-top-users/quiz-top-users';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyClU8HlHob8iRg5FDNHleDm-0HqsYj3Mtw",
@@ -46,6 +49,8 @@ export const firebaseConfig = {
     ContactPage,
     QuizPage,
     QuizYesnoPage,
+    QuizUserHistoryPage,
+    QuizTopUsersPage,
     HomePage,
     MenuPage,
     TabsPage,
@@ -53,7 +58,8 @@ export const firebaseConfig = {
     PlanetsPage,
     StarsPage,
     FlashCardComponent,
-    ExpandableComponent
+    ExpandableComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +83,9 @@ export const firebaseConfig = {
     SignupPage,
     MenuPage,
     PlanetsPage,
-    StarsPage
+    StarsPage,
+    QuizUserHistoryPage,
+    QuizTopUsersPage
   ],
   providers: [
     StatusBar,

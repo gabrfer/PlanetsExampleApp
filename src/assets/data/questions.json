@@ -3,10 +3,10 @@
     "name": "quizPlanets",
     "questions": [
         {
-            "flashCardFront": "<img src='assets/imgs/jupiter-surface.jpg' />",
-            "flashCardBack": "Jupiter",
+            "flashCardFront": "<img src='http://via.placeholder.com/600x300' />",
+            "flashCardBack": "Answer 1",
             "flashCardFlipped": false,
-            "questionText": "What planet is this?",
+            "questionText": "What question is this?",
             "answers": [
                 {"answer": "Saturn", "correct": false, "selected": false, "color": "answer"},
                 {"answer": "Neptune", "correct": false, "selected": false, "color": "answer"},
@@ -14,10 +14,10 @@
             ]
         },
         {
-            "flashCardFront": "<img src='assets/imgs/mars-surface.jpg' />",
-            "flashCardBack": "Mars",
+            "flashCardFront": "<img src='http://via.placeholder.com/600x300' />",
+            "flashCardBack": "Answer 2",
             "flashCardFlipped": false,
-            "questionText": "What planet is this?",
+            "questionText": "What question is this?",
             "answers": [
                 {"answer": "Mars", "correct": true, "selected": false, "color": "answer"},
                 {"answer": "Venus", "correct": false, "selected": false, "color": "answer"},
@@ -25,10 +25,10 @@
             ]
         },
         {
-            "flashCardFront": "<img src='assets/imgs/venus-surface.jpg' />",
-            "flashCardBack": "Venus",
+            "flashCardFront": "<img src='http://via.placeholder.com/600x300' />",
+            "flashCardBack": "Answer 3",
             "flashCardFlipped": false,
-            "questionText": "What planet is this?",
+            "questionText": "What question is this?",
             "answers": [
                 {"answer": "Mercury", "correct": false, "selected": false, "color": "answer"},
                 {"answer": "Venus", "correct": true, "selected": false, "color": "answer"},

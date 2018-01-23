@@ -25,6 +25,8 @@ export class MyApp {
   showLevel1 = null;
   showLevel2 = null;
 
+  isMenuClose: boolean = false;
+
   constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, 
               private authProvider: AuthProvider, private menuProvider: MenuProvider) {
     
@@ -70,7 +72,10 @@ export class MyApp {
     this.nav.setRoot(pageObject);
   }
 
-  toggleLevel1(idx) {
+  toggleLevel1(idx, page) {
+    if (page) {
+      this.openPage(page);
+    }else 
     if (this.isLevel1Shown(idx)) {
       this.showLevel1 = null;
     } else {

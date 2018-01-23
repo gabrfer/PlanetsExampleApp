@@ -18,9 +18,9 @@ export class FlashCardComponent {
     let frontH = this.fcFront.nativeElement.querySelector('.flash-card-front').offsetHeight + 40;
     let backH = this.fcBack.nativeElement.querySelector('.flash-card-back').offsetHeight + 40;
     let h = ((frontH > backH)? frontH:backH) + 'px';
-    this.fcContainer.nativeElement.style.height = h;
+/*     this.fcContainer.nativeElement.style.height = h;
     this.fcBack.nativeElement.style.height = h;
-    this.fcFront.nativeElement.style.height = h;
+    this.fcFront.nativeElement.style.height = h; */
   }
  
 }

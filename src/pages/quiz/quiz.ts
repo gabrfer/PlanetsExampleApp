@@ -16,7 +16,9 @@ export class QuizPage {
 
   slideOptions: any;
   questions: any;
-  idQuiz: 0;
+  quizCode: "";
+  loadProgress: number = 0;
+  percentegePerQuestion: number = 0;
 
   private answerOriginalColor: string = 'answer';
   private answerSelectedColor: string = 'answerSelected';
@@ -47,7 +49,8 @@ export class QuizPage {
       });
 
       this.questions = data.questions;
-      this.idQuiz = data.idQuiz;
+      this.percentegePerQuestion = Math.round(100 / this.questions.length);
+      this.quizCode = data.name;
     })
   }
 
@@ -59,32 +62,38 @@ export class QuizPage {
   
   selectAnswer(answer, question){
 
-    this.hasAnswered = true;
-    answer.selected = true;
-    question.flashCardFlipped = true;
+    answer.color = this.answerSelectedColor;
+    setTimeout(() => {
+      this.hasAnswered = true;
+      answer.selected = true;
+      question.flashCardFlipped = true;
+    }, 1500);
 
     if(answer.correct){
-      this.score++;
+      this.score += 5;
     }
-
-    answer.color = (answer.correct) ? this.answerCorrectColor : this.answerIncorrectColor;
 
     setTimeout(() => {
       this.hasAnswered = false;
       this.nextSlide();
       answer.selected = false;
       question.flashCardFlipped = false;
+      this.loadProgress += this.percentegePerQuestion;
     }, 3000);
 
   }
 
   randomizeAnswers(rawAnswers: any[]): any[] {
 
+    let arrayLetters: string[] = ["A", "B", "C"];
+
     for (let i = rawAnswers.length  - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       let temp = rawAnswers[i];
       rawAnswers[i] = rawAnswers[j];
+      rawAnswers[i].letter = arrayLetters[i];
       rawAnswers[j] = temp;
+      rawAnswers[j].letter = arrayLetters[j];
     }
 
     return rawAnswers;
@@ -92,7 +101,7 @@ export class QuizPage {
 
   restartQuiz() {
 
-    this.quizPointsProvider.addPoints(this.score, this.idQuiz);
+    this.quizPointsProvider.editPoints(this.score, this.quizCode);
 
     this.score = 0;
     this.slides.lockSwipes(false);

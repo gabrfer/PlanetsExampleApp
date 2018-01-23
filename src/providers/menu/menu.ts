@@ -11,6 +11,7 @@ import { LoginPage } from '../../pages/login/login';
 import { SignupPage } from '../../pages/signup/signup';
 import { QuizYesnoPage } from '../../pages/quiz-yesno/quiz-yesno';
 import { StarsPage } from '../../pages/stars/stars';
+import { TabsPage } from '../../pages/tabs/tabs';
 
 /*
   Generated class for the MenuServiceProvider provider.
@@ -52,6 +53,10 @@ export class MenuProvider {
       }
       case "QuizYesnoPage": {
         pageObject = QuizYesnoPage;
+        break;
+      }
+      case "TabsPage": {
+        pageObject = TabsPage;
         break;
       }
       case "QuizTopUsersPage": {
