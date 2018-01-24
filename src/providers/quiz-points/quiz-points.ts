@@ -10,8 +10,8 @@ export class QuizPointsProvider {
 
   }
 
-  fetchPoints(userId): AngularFireList<any[]>{
-    return this.db.list('/userPoints/'+userId);
+  fetchPoints(): AngularFireList<any[]>{
+    return this.db.list('/userPoints');
   }
 
   addPoints(puntuation, quizId) {

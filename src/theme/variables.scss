@@ -48,6 +48,7 @@ $colors: (
 $text-color:        rgb(0, 0, 0);
 $background-color:  #eceff5;
 
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -92,3 +93,7 @@ $background-color:  #eceff5;
 
 @import "roboto";
 @import "noto-sans";
+
+$font-family-md-base: "roboto";
+$font-family-ios-base: "roboto";
+$font-family-wp-base: "roboto";

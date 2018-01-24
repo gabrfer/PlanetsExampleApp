@@ -10,9 +10,35 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
+<ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 100%">
+      <ion-card>
+          <ion-list>
+              <ion-label class="labelCenter">LOGIN DUMMY</ion-label>
+              <ion-item padding>
+                  <ion-label floating>Username</ion-label>
+                  <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+                </ion-item> 
+
+                <ion-item padding>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+                  </ion-item>
+
+                  <div padding>
+                      <button ion-button full color="dark" (click)="signIn()">Login</button>
+                  </div>          
+          </ion-list>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!-- <ion-content>
+    <ion-card class="sign-in-container" text-center>
         <ion-card-content>
-            <ion-grid>
+          <div>
+            <ion-grid fixed>
                 <ion-row>
                     <ion-col col-12>
                       <ion-label>LOGIN DUMMY</ion-label>
@@ -39,9 +65,10 @@
                       <button ion-button full color="dark" (click)="signIn()">Login</button>
                     </ion-col>
                 </ion-row>
-            </ion-grid>               
+            </ion-grid>      
+          </div>         
         </ion-card-content>
       </ion-card>
-</ion-content>
+</ion-content> -->
 
 
