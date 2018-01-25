@@ -16,9 +16,14 @@ export class QuizPage {
 
   slideOptions: any;
   questions: any;
+  questionsKeys: String[];
+  answerKeys: String[] = ["answer1", "answer2", "answer3"];
+  answerColor = "answer"
+
   quizCode: "";
   loadProgress: number = 0;
   percentegePerQuestion: number = 0;
+  quizInfo;
 
   private answerOriginalColor: string = 'answer';
   private answerSelectedColor: string = 'answerSelected';
@@ -37,7 +42,20 @@ export class QuizPage {
     
     this.slides.lockSwipes(true);
 
-    this.dataService.load().then(data => {
+ /*    this.dataService.getQuizInfo().snapshotChanges().map(actions => {
+      return actions.map(action => ({key: action.key, ...action.payload.val()}));
+    }).subscribe(items => {
+        this.quizInfo = items;
+      }); */
+
+      this.dataService.getQuizPlanets().snapshotChanges().map(actions => {
+        return actions.map(action => (action.payload.val()));
+      }).subscribe(items => {
+          this.questions = items[0];
+          this.questionsKeys = Object.keys(items[0]);
+        });
+
+    /* this.dataService.load().then(data => {
 
       let i = 0;
 
@@ -51,7 +69,7 @@ export class QuizPage {
       this.questions = data.questions;
       this.percentegePerQuestion = Math.round(100 / this.questions.length);
       this.quizCode = data.name;
-    })
+    }) */
   }
 
   nextSlide(){

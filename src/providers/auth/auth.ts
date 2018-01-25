@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { DataProvider } from '../../providers/data/data';
 
 @Injectable()
 export class AuthProvider{
-    constructor(private afAuth: AngularFireAuth){
+    constructor(private afAuth: AngularFireAuth, public dataProvider: DataProvider){
     }
 
     signIn(username: string, password: string){
@@ -11,7 +12,12 @@ export class AuthProvider{
     }
 
     signUp(username: string, password: string){
-        return this.afAuth.auth.createUserWithEmailAndPassword(username, password);
+        let signupUser = this.afAuth.auth.createUserWithEmailAndPassword(username, password);
+        this.getCurrentUser().subscribe(authState => {
+            this.dataProvider.createUserQuizInfo(authState.uid, username, true);
+          });
+        
+        return signupUser;
     }
 
     getCurrentUser(){
