@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Storage } from '@ionic/storage';
+import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/map';
 
 /*
@@ -28,7 +29,7 @@ export class DataProvider {
 
   createUserQuizInfo(userId: String, username: String, newUser: Boolean) {
     if (newUser) {
-      this.db.list('/userPoints/'+userId).push({
+      this.db.list('/userPoints/').set(""+userId,{
         userName: username
       });
     }
@@ -36,23 +37,29 @@ export class DataProvider {
     this.db.list('quizInfo').snapshotChanges().map(actions => {
       return actions.map(action => (action.payload.val()));
     }).subscribe(items => {
-        let listQuizInfo = items[0];
-        listQuizInfo.array.forEach(quizInfo => {
-          let quizVersion:number = quizInfo[0].lastVersion;
 
-          this.db.list('/userPoints/'+userId+'/'+quizInfo[0]).valueChanges().subscribe(items => {
-            if (items.length > 0) {
-              let userLastQuizVersion:number = items[0][0].lastVersion;
-              for (let i = userLastQuizVersion; i < quizVersion; i++){
-                this.db.list('/userPoints/'+userId+'/'+quizInfo[0]+'/v'+(i+1)).push({});
-              }
-            } else {             
-              for(let i = 1; i <= quizVersion; i++){
-                this.db.list('/userPoints/'+userId+'/'+quizInfo[0]+'/v'+i).push({});
-              }              
+      items.forEach((quizInfo) => {
+          let quizVersion:number = quizInfo.lastVersion;
+
+          this.db.object('/userPoints/'+userId+'/'+quizInfo.name).snapshotChanges().take(1)
+            .subscribe((obj) => {
+              if (obj.hasOwnProperty('$value') && !obj['$value']) {
+                let userLastQuizVersion:number = items[0].lastVersion;
+                for (let i = userLastQuizVersion; i < quizVersion; i++){
+                  this.db.list('/userPoints/'+userId+'/'+quizInfo.name).set('/v'+(i+1),{
+                    puntuation: 0,
+                    lastVersion: i
+                  });
+                }             
+            } else {
+              for (let i = 1; i <= quizVersion; i++){
+                this.db.list('/userPoints/'+userId+'/'+quizInfo.name).set('/v'+i, {
+                  puntuation: 0,
+                  lastVersion: i
+                });
+              } 
             }
-          })
-
+          });
         });
       });
   }

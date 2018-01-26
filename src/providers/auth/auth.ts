@@ -12,10 +12,13 @@ export class AuthProvider{
     }
 
     signUp(username: string, password: string){
-        let signupUser = this.afAuth.auth.createUserWithEmailAndPassword(username, password);
-        this.getCurrentUser().subscribe(authState => {
-            this.dataProvider.createUserQuizInfo(authState.uid, username, true);
-          });
+
+        const createUserData = (uid, username) => this.dataProvider.createUserQuizInfo(uid, username, true);
+
+        let signupUser = this.afAuth.auth.createUserWithEmailAndPassword(username, password)
+        .then(function(user) {
+            createUserData(user.uid, username);
+        });
         
         return signupUser;
     }
