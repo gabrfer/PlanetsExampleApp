@@ -10,46 +10,28 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="image--background" padding>
 
     <ion-grid text-center>
- 
-        <ion-row class="rowHeader" style="background-color: #d33321;">
-          <ion-col col-8>
-            <ion-list no-lines>
-                <ion-item style="background-color: transparent;">
-                    <ion-label style="font-size: 24px; background-color: transparent;" stacked>Registro de usuario</ion-label>
-                  </ion-item>
-                  <ion-item style="background-color: transparent;">
-                    <ion-label style="font-size: 12px; background-color: transparent;" stacked>Registrate y empieza a disfrutar de los contenidos</ion-label>
-                  </ion-item>
-            </ion-list>
-          </ion-col>
-          <ion-col col-4>
-            <button style="background-color: transparent;" ion-button>
-                <ion-icon name="create"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-   
+    
         <ion-row class="rowContent">
           <ion-col col-2></ion-col>
           <ion-col col-8>  
             <ion-list>
               <ion-item>
-                <ion-label floating>Nombre a mostrar</ion-label>
+                <ion-label fixed>Nombre de usuario</ion-label>
                 <ion-input type="text" [(ngModel)]="usuarioDisplay"></ion-input>
               </ion-item>
               <ion-item>
-                <ion-label floating>Usuario</ion-label>
+                <ion-label fixed>Usuario</ion-label>
                 <ion-input type="text" [(ngModel)]="username"></ion-input>
               </ion-item>
               <ion-item>
-                <ion-label floating>Contraseña</ion-label>
+                <ion-label fixed>Contraseña</ion-label>
                 <ion-input type="password" [(ngModel)]="password"></ion-input>
               </ion-item>
               <ion-item>
-                <ion-label floating>Confirma contraseña</ion-label>
+                <ion-label fixed>Confirma contraseña</ion-label>
                 <ion-input type="password" [(ngModel)]="passwordConfirm"></ion-input>
               </ion-item>                
             </ion-list>

@@ -1,14 +1,18 @@
 page-login {
 
     ion-content{
-        background-image: url('../../assets/imgs/login-back.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+        background: url('../../assets/imgs/rocket-1103713.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;    
+        width: 100%;
     }
+    
 
     ion-card{
         width: 75% !important;
-        opacity: 0.8 !important;
+        opacity: 0.5 !important;
     }
 
     .labelCenter{
