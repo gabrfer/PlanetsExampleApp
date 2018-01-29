@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
+import { QuizPointsProvider } from '../../providers/quiz-points/quiz-points';
+import { LocalStorageProvider } from '../../providers/local-storage/local-storage';
 import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
 import { MenuPage } from '../menu/menu';
@@ -22,8 +24,8 @@ export class LoginPage {
   username = '';
   password = '';
 
-  constructor(public navCtrl: NavController, private authService: AuthProvider, 
-              private loadingCtrl: LoadingController, private alertCrl: AlertController) {
+  constructor(public navCtrl: NavController, private authService: AuthProvider, private quizPointsProvider: QuizPointsProvider,
+              private localStorageProvider: LocalStorageProvider, private loadingCtrl: LoadingController, private alertCrl: AlertController) {
   
   }
 
@@ -42,17 +44,12 @@ export class LoginPage {
 
     this.authService.signIn(this.username, this.password)
     .then(authState => {
+      this.quizPointsProvider.getAllUserPoints(authState.uid);
       loading.dismiss();
       this.navCtrl.setRoot(HomePage);
     })
     .catch(function(error){
       loading.dismiss();
-      /*const alert = this.alertCtrl.create({
-        title: 'Signin failed.',
-        message: error.message,
-        buttons:['Ok']
-        });
-        alert.present();*/
       alert(error.message).present();
     });
   }

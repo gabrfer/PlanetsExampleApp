@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpModule } from '@angular/http';
+import { Storage, IonicStorageModule } from '@ionic/storage';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -20,7 +21,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
-import { IonicStorageModule } from '@ionic/storage';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { MenuPage } from '../pages/menu/menu';
@@ -32,6 +32,7 @@ import { StarsPage } from '../pages/stars/stars';
 import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
 import { QuizUserHistoryPage } from '../pages/quiz-user-history/quiz-user-history';
 import { QuizTopUsersPage } from '../pages/quiz-top-users/quiz-top-users';
+import { LocalStorageProvider } from '../providers/local-storage/local-storage';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyClU8HlHob8iRg5FDNHleDm-0HqsYj3Mtw",
@@ -94,7 +95,8 @@ export const firebaseConfig = {
     DataProvider,
     AuthProvider,
     MenuProvider,
-    QuizPointsProvider
+    QuizPointsProvider,
+    LocalStorageProvider
   ]
 })
 export class AppModule {}

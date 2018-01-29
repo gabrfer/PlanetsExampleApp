@@ -12,41 +12,37 @@
 
 <ion-content class="image--background" padding>
 
-    <ion-grid text-center>
-    
+    <ion-grid text-center> 
+        <ion-row class="rowHeader">
+          <ion-col col-2></ion-col>
+          <ion-col col-8>
+              <h1>
+                  <ion-icon name="trophy"></ion-icon>
+              </h1>             
+          </ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
         <ion-row class="rowContent">
           <ion-col col-2></ion-col>
           <ion-col col-8>  
             <ion-list>
-              <ion-item>
-                <ion-label fixed>Nombre de usuario</ion-label>
-                <ion-input type="text" [(ngModel)]="usuarioDisplay"></ion-input>
+              <ion-item class="ionItemBox">
+                <ion-input type="text" [(ngModel)]="displayname" placeholder="Nombre a mostrar"></ion-input>
               </ion-item>
-              <ion-item>
-                <ion-label fixed>Usuario</ion-label>
-                <ion-input type="text" [(ngModel)]="username"></ion-input>
+              <ion-item class="ionItemBox">
+                <ion-input type="text" [(ngModel)]="username" placeholder="Usuario"></ion-input>
               </ion-item>
-              <ion-item>
-                <ion-label fixed>Contraseña</ion-label>
-                <ion-input type="password" [(ngModel)]="password"></ion-input>
+              <ion-item class="ionItemBox">
+                <ion-input type="password" [(ngModel)]="password" placeholder="Contraseña"></ion-input>
               </ion-item>
-              <ion-item>
-                <ion-label fixed>Confirma contraseña</ion-label>
-                <ion-input type="password" [(ngModel)]="passwordConfirm"></ion-input>
-              </ion-item>                
+              <ion-item class="ionItemBox">
+                <ion-input type="password" [(ngModel)]="passwordConfirm" placeholder="Repita contraseña"></ion-input>
+              </ion-item>    
+                <button ion-button class="buttonLarge" (click)=" onSignUp()" color="darkGreenButton" text-center>Sign Up</button>        
             </ion-list>
           </ion-col>   
           <ion-col col-2></ion-col>        
         </ion-row> 
-
-        <ion-row class="rowFooter" text-center>
-            <ion-col col-2></ion-col>
-            <ion-col col-8 text-center>
-                <button ion-button class="buttonFullWidth" (click)=" onSignUp()" text-center>Sign Up</button>
-            </ion-col>         
-            <ion-col col-2></ion-col>  
-        </ion-row>
-
     </ion-grid>
 
 </ion-content>

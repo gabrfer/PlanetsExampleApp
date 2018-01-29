@@ -2,6 +2,30 @@
 
     page-quiz {
 
+        ion-grid {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
+
+        ion-row{
+            align-items: center;
+        }
+
+        .rowHeader{
+            flex:1;
+            background-color: rgba(85, 107, 47, 0);
+        }
+    
+        .rowContent{
+            flex:6;
+        }
+    
+        .rowFooter{
+            flex:2;
+        }
+
         ion-slide {
             align-items: flex-start;
         }
@@ -19,6 +43,7 @@
                 height: 100vh;
             }
         }
+        
 
         .start-slide {
             justify-content: center;

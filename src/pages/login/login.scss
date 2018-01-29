@@ -9,37 +9,64 @@ page-login {
         width: 100%;
     }
     
-
-    ion-card{
-        width: 75% !important;
-        opacity: 0.5 !important;
-    }
-
     .labelCenter{
         text-align: center;
     }
 
-/*     $grid-columns: 6;
+    ion-item {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        align-items: center;
 
+      }
 
-
-    ion-grid{
-        $grid-columns: 6;
-        height: 60vh;
-        width: 50vw;
-    }
+      ion-item.item {
+        background-color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 1px;
+        margin-top: 10px;
+        .input {
+          width: 10%;
+          color: rgba(0, 0, 0, 0.6);
+          font-size: 1.2em;
+        }
+      }
 
     ion-row{
-        height: 25%;
-        width: 50vw;
         align-items: center;
     }
 
-    .sign-in-container {
-        margin-left:auto;
-        margin-right:auto;
-        max-width:60%;   //your max size here
-    } */
+    ion-list{
+        align-self: center;
+    }
 
+    ion-icon{
+        font-size: 100px;
+        color: white;
+    }
+
+    ion-label{
+        color: white;
+    }
+
+    .buttonLarge {
+        width: 100%;
+        height: 8vh;
+        margin-top: 20%;
+    }
+
+    .rowHeader{
+        flex:2;
+        background-color: rgba(85, 107, 47, 0);
+    }
+
+    .rowContent{
+        flex:4;
+    }
+
+    .rowFooter{
+        flex:2;
+    }
 
 }

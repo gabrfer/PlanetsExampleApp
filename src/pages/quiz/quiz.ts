@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 import { QuizPointsProvider } from '../../providers/quiz-points/quiz-points';
+import { LocalStorageProvider } from '../../providers/local-storage/local-storage';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-quiz',
@@ -20,18 +22,18 @@ export class QuizPage {
   answerKeys: String[] = ["answer1", "answer2", "answer3"];
   answerColor = "answer"
 
-  quizCode: "";
+  userPoints;
+
   loadProgress: number = 0;
   percentegePerQuestion: number = 0;
-  quizInfo;
 
   private answerOriginalColor: string = 'answer';
   private answerSelectedColor: string = 'answerSelected';
   private answerCorrectColor: string = 'answerCorrect';
   private answerIncorrectColor: string = 'answerIncorrect';
 
-  constructor(public navCtrl: NavController, public dataService: DataProvider, 
-              public quizPointsProvider: QuizPointsProvider) {
+  constructor(public navCtrl: NavController, public dataService: DataProvider, private storage: Storage,
+              public quizPointsProvider: QuizPointsProvider, public localStorageProvider: LocalStorageProvider) {
   }
 
   toggleAnswerColor() {
@@ -42,34 +44,17 @@ export class QuizPage {
     
     this.slides.lockSwipes(true);
 
- /*    this.dataService.getQuizInfo().snapshotChanges().map(actions => {
-      return actions.map(action => ({key: action.key, ...action.payload.val()}));
-    }).subscribe(items => {
-        this.quizInfo = items;
-      }); */
 
-      this.dataService.getQuizPlanets().snapshotChanges().map(actions => {
-        return actions.map(action => (action.payload.val()));
-      }).subscribe(items => {
-          this.questions = items[0];
-          this.questionsKeys = Object.keys(items[0]);
-        });
+      this.localStorageProvider.getObject("userPoints").then((data) => {
+        this.userPoints = JSON.parse(data).filter(x => x.key == "quizPlanets")[0];
 
-    /* this.dataService.load().then(data => {
-
-      let i = 0;
-
-      data.questions.map((question) => {
-
-        let originalOrder = question.answers;
-        question.answers = this.randomizeAnswers(originalOrder);
-        return question;
-      });
-
-      this.questions = data.questions;
-      this.percentegePerQuestion = Math.round(100 / this.questions.length);
-      this.quizCode = data.name;
-    }) */
+        this.dataService.getQuizPlanets().snapshotChanges().map(actions => {
+          return actions.map(action => (action.payload.val()));
+        }).subscribe(items => {
+            this.questions = items[0];
+            this.questionsKeys = Object.keys(items[0]);
+          });
+      });       
   }
 
   nextSlide(){
@@ -119,7 +104,7 @@ export class QuizPage {
 
   restartQuiz() {
 
-    this.quizPointsProvider.editPoints(this.score, this.quizCode);
+    this.quizPointsProvider.editPoints(this.score, this.userPoints.key, this.userPoints.userActualVersion + 1);
 
     this.score = 0;
     this.slides.lockSwipes(false);

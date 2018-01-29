@@ -27,10 +27,10 @@ export class DataProvider {
     return this.db.list('quizInfo');
   }
 
-  createUserQuizInfo(userId: String, username: String, newUser: Boolean) {
+  createUserQuizInfo(userId: String, displayName: String, newUser: Boolean) {
     if (newUser) {
       this.db.list('/userPoints/').set(""+userId,{
-        userName: username
+        userName: displayName
       });
     }
     
@@ -45,20 +45,24 @@ export class DataProvider {
             .subscribe((obj) => {
               if (obj.hasOwnProperty('$value') && !obj['$value']) {
                 let userLastQuizVersion:number = items[0].lastVersion;
+
                 for (let i = userLastQuizVersion; i < quizVersion; i++){
                   this.db.list('/userPoints/'+userId+'/'+quizInfo.name).set('/v'+(i+1),{
-                    puntuation: 0,
-                    lastVersion: i
+                    puntuation: 0
                   });
                 }             
-            } else {
-              for (let i = 1; i <= quizVersion; i++){
-                this.db.list('/userPoints/'+userId+'/'+quizInfo.name).set('/v'+i, {
-                  puntuation: 0,
-                  lastVersion: i
+             } else {
+                this.db.list('/userPoints/'+userId).set(quizInfo.name, {
+                  lastVersion: quizVersion,
+                  userActualVersion: 1
                 });
-              } 
-            }
+                
+                for (let i = 1; i <= quizVersion; i++){
+                  this.db.list('/userPoints/'+userId+'/'+quizInfo.name).set('/v'+i, {
+                    puntuation: 0
+                  });
+                } 
+             }
           });
         });
       });

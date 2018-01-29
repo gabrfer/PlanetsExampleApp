@@ -19,6 +19,7 @@ export class SignupPage {
 
   username = '';
   password = '';
+  displayname = '';
 
   constructor(private authService: AuthProvider, public navCtrl: NavController, 
               private loadingCtrl: LoadingController, private alertCtrl: AlertController) {
@@ -30,7 +31,7 @@ export class SignupPage {
     });
     loading.present();
       
-    this.authService.signUp(this.username, this.password)
+    this.authService.signUp(this.displayname, this.username, this.password)
       .then(
         data => {
           loading.dismiss()
