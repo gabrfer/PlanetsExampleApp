@@ -46,13 +46,9 @@ export class QuizPointsProvider {
   editPoints(puntuation, quizCode, newVersion) {
     this.authProvider.getCurrentUser().subscribe(authState => {
 
-      this.db.object('/userPoints/'+authState.uid+'/'+quizCode+'/userActualVersion').update({
-        newVersion
+      this.db.object('/userPoints/'+authState.uid+'/'+quizCode).update({
+        userActualVersion: newVersion
       });
-
-      /* this.db.list('/userPoints/'+authState.uid+'/'+quizCode).set("userActualVersion",{
-        newVersion
-      }); */
 
       this.db.list('/userPoints/'+authState.uid+"/"+quizCode).set("v"+newVersion,{
         puntuation

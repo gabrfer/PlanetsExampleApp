@@ -9,6 +9,10 @@ page-login {
         width: 100%;
     }
     
+    ion-col {
+        position: initial !important;
+    }
+
     .labelCenter{
         text-align: center;
     }
@@ -18,18 +22,19 @@ page-login {
         border-top-right-radius: 5px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        align-items: center;
+    }
 
-      }
 
       ion-item.item {
         background-color: rgba(255, 255, 255, 0.4);
         margin-bottom: 1px;
-        margin-top: 10px;
+        margin-top: 5px;
+        min-height: 1rem;
+        height: 9vh;
         .input {
           width: 10%;
           color: rgba(0, 0, 0, 0.6);
-          font-size: 1.2em;
+          font-size: 1.0em;
         }
       }
 
@@ -62,11 +67,11 @@ page-login {
     }
 
     .rowContent{
-        flex:4;
+        flex:5;
     }
 
     .rowFooter{
-        flex:2;
-    }
+        flex:3;
+    } 
 
 }

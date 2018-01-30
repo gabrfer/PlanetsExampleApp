@@ -20,23 +20,25 @@
         </ion-col>
       <ion-col col-2></ion-col>
     </ion-row>
-    <ion-row class="rowContent" justify-content-center align-items-center style="height: 100%">
-          <ion-list>
-              <ion-label class="labelCenter">LOGIN DUMMY</ion-label>
+    <ion-row class="rowContent" justify-content-center align-items-center>
+        <ion-list>
+            <ion-label class="labelCenter">LOGIN DUMMY</ion-label>
 
-              <ion-item padding>
-                <!-- <ion-label floating>Username</ion-label> -->
-                <ion-input type="text" [(ngModel)]="username" name="username" placeholder="Usuario"></ion-input>
-              </ion-item> 
+            <ion-item padding>
+              <!-- <ion-label floating>Username</ion-label> -->
+              <ion-input type="text" [(ngModel)]="username" name="username" placeholder="Usuario"></ion-input>
+            </ion-item> 
 
-              <ion-item padding>
-                <!-- <ion-label floating>Password</ion-label> -->
-                <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña"></ion-input>
-              </ion-item>
+            <ion-item padding>
+              <!-- <ion-label floating>Password</ion-label> -->
+              <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña"></ion-input>
+            </ion-item>
 
-              <button class="buttonLarge" ion-button color="darkGreenButton" (click)="signIn()" text-center>Login</button>
+            <button class="buttonLarge" ion-button color="darkGreenButton" (click)="signIn()" text-center>Login</button>
 
-          </ion-list>
-    </ion-row>
+        </ion-list>
+  </ion-row>
+    <ion-row class="rowFooter" justify-content-center align-items-center>
+      </ion-row>
   </ion-grid>
 </ion-content>

@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpModule } from '@angular/http';
 import { Storage, IonicStorageModule } from '@ionic/storage';
+import { Keyboard } from '@ionic-native/keyboard';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -67,7 +68,8 @@ export const firebaseConfig = {
     HttpClientModule,
     HttpModule,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, { scrollAssist: false, autoFocusAssist: false } ),
+    //IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
@@ -96,7 +98,8 @@ export const firebaseConfig = {
     AuthProvider,
     MenuProvider,
     QuizPointsProvider,
-    LocalStorageProvider
+    LocalStorageProvider,
+    Keyboard
   ]
 })
 export class AppModule {}

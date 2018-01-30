@@ -10,6 +10,8 @@ import { QuizPage } from '../pages/quiz/quiz';
 import { AuthProvider } from '../providers/auth/auth';
 import { MenuProvider } from '../providers/menu/menu';
 import { DataProvider } from '../providers/data/data';
+import { Keyboard } from '@ionic-native/keyboard';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +29,7 @@ export class MyApp {
 
   isMenuClose: boolean = false;
 
-  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, 
+  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, keyboard: Keyboard,
               private authProvider: AuthProvider, private menuProvider: MenuProvider) {
     
 
@@ -36,6 +38,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      keyboard.disableScroll(true);
     });
     
     // used for an example of ngFor and navigation
