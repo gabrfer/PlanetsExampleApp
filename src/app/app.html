@@ -24,7 +24,7 @@
                                 item-right [name]="isLevel2Shown('idx'+i+'idx'+i2) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
                     </h4>
                     <ion-list *ngIf="isLevel2Shown('idx'+i+'idx'+i2)">
-                      <ion-item *ngFor="let m of s.childs" (click)="openPage(m.component)" menuClose detail-none text-wrap>
+                      <ion-item *ngFor="let m of s.childs" (click)="openPage(m.component, m.quizName)" menuClose detail-none text-wrap>
                         <ion-icon class="icon-left" [name]="m.icon" item-left></ion-icon>
                           <span class="text">{{m.child}}</span>
                       </ion-item>

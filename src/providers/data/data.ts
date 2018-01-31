@@ -23,11 +23,15 @@ export class DataProvider {
     return this.db.list('/quizes/quizPlanets/v1');
   }
 
+  getQuizByName(quizName, version){
+    return this.db.list('/quizes/'+quizName+'/v'+version);
+  }
+
   getQuizInfo(){
     return this.db.list('quizInfo');
   }
 
-  createUserQuizInfo(userId: String, displayName: String, newUser: Boolean) {
+  createUserQuizInfo(userId: String, newUser: Boolean, displayName: String = "") {
     if (newUser) {
       this.db.list('/userPoints/').set(""+userId,{
         userName: displayName

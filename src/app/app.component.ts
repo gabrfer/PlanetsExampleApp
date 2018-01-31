@@ -68,16 +68,16 @@ export class MyApp {
 
   
     
-  openPage(page) {
+  openPage(page, quizName) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     let pageObject = this.menuProvider.getNotLazyComponent(page);
-    this.nav.setRoot(pageObject);
+    this.nav.setRoot(pageObject, { 'quizName': quizName });
   }
 
   toggleLevel1(idx, page) {
     if (page) {
-      this.openPage(page);
+      this.openPage(page, "");
     }else 
     if (this.isLevel1Shown(idx)) {
       this.showLevel1 = null;
@@ -88,7 +88,7 @@ export class MyApp {
   
   toggleLevel2(idx, page) {
     if (page) {
-      this.openPage(page);
+      this.openPage(page, "");
     }else {
       if (this.isLevel2Shown(idx)) {
         this.showLevel1 = null;

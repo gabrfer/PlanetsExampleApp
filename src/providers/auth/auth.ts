@@ -8,12 +8,20 @@ export class AuthProvider{
     }
 
     signIn(username: string, password: string){
-        return this.afAuth.auth.signInWithEmailAndPassword(username,password);
+        const updateUserData = (uid) => this.dataProvider.createUserQuizInfo(uid, true);
+
+        let signinUser = this.afAuth.auth.signInWithEmailAndPassword(username,password)
+        .then(function(user) {
+            updateUserData(user.uid);
+            return user.uid;
+        });
+
+        return signinUser;
     }
 
     signUp(displayname: string, username: string, password: string){
 
-        const createUserData = (uid, displayname) => this.dataProvider.createUserQuizInfo(uid, displayname, true);
+        const createUserData = (uid, displayname) => this.dataProvider.createUserQuizInfo(uid, true, displayname);
 
         let signupUser = this.afAuth.auth.createUserWithEmailAndPassword(username, password)
         .then(function(user) {

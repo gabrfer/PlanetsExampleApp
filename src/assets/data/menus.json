@@ -15,14 +15,14 @@
       },
       {
           "subcategory":"Matemáticas", "icon": "calculator", "hasChilds": "true", "menuClose": "right",
-        "childs": [
-          {
-            "child":"Planetas", "component": "PlanetsPage", "hasChilds": "false", "menuClose": "left"
-          },
-          {
-            "child":"Estrellas", "component": "PlanetsPage", "hasChilds": "false", "menuClose": "left"
-          }
-        ]
+          "childs": [
+            {
+              "child":"Planetas", "component": "PlanetsPage", "hasChilds": "false", "menuClose": "left"
+            },
+            {
+              "child":"Estrellas", "component": "PlanetsPage", "hasChilds": "false", "menuClose": "left"
+            }
+          ]
         }
     ]
   },
@@ -30,10 +30,29 @@
     "category":"Juega", "icon": "trophy", "menuClose": "right",
     "subs": [
       {
-        "subcategory":"Quiz", "component": "QuizPage", "icon": "help", "hasChilds": "false", "menuClose": "left"
+        "subcategory":"Quiz", "icon": "help", "hasChilds": "true", "menuClose": "right",
+        "childs": [
+          {
+            "child":"Ciencia", "component": "QuizPage", "quizName": "quizPlanets", "hasChilds": "false", "menuClose": "left"
+          },
+          {
+            "child":"Matemáticas", "component": "QuizPage", "quizName": "quizMath", "hasChilds": "false", "menuClose": "left"
+          },
+          {
+            "child":"Historia", "component": "QuizPage", "quizName": "quizHistory", "hasChilds": "false", "menuClose": "left"
+          }
+        ]
       },
       {
-        "subcategory":"Verdadero / Falso", "component": "QuizYesnoPage", "icon": "clipboard", "hasChilds": "false", "menuClose": "left"
+        "subcategory":"Verdadero / Falso", "icon": "clipboard", "hasChilds": "true", "menuClose": "right",
+        "childs": [
+          {
+            "child":"Ciencia", "component": "QuizYesnoPage", "quizName": "quizScienceYesNo", "hasChilds": "false", "menuClose": "left"
+          },
+          {
+            "child":"Historia", "component": "QuizYesnoPage", "quizName": "quizHistoryYesNo", "hasChilds": "false", "menuClose": "left"
+          }
+        ]
       }
     ]
   },

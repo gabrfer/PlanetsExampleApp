@@ -20,7 +20,7 @@
           <progress-bar [progress]="loadProgress"></progress-bar>
       </ion-col>
     </ion-row>
-    <ion-row class="rowContent" style="height: 100%">
+    <ion-row class="rowContent">
       <ion-col>
           <ion-slides #slides>
 
@@ -29,18 +29,22 @@
                   <h3>Pregunta {{i + 1}}</h3>
         
                   <flash-card [isFlipped]="questions[key].flashCardFlipped">
-                      <div class="flash-card-front"><img src="{{questions[key].imgURL}}"/></div>
-                      <div class="flash-card-back"><p>{{questions[key].correctAnswer}}</p></div>
+                      <div class="flash-card-front">
+                        <p class="blackboardText">{{questions[key].question}}</p>
+                      </div>
+                      <div class="flash-card-back">
+                        <p class="blackboardText">{{questions[key].correctAnswer}}</p>
+                      </div>
                   </flash-card>
         
-                  <h3>[Texto de la pregunta]</h3>
+                  <h3>{{questions[key].question}}</h3>
         
                   <ion-list no-lines radio-group>
         
-                      <ion-item class="label-rounded" *ngFor="let answerKey of answerKeys; let j = index;" [color]="questions[key].answers[answerKey].color" style="height:8vh;">
+                      <ion-item class="label-rounded" *ngFor="let answerKey of answerKeys; let j = index;" [color]="questions[key].answers[answerKey].color">
                           <ion-badge class="answer-badge" item-start>{{j}}</ion-badge>  
                           <!-- <ion-label>{{i+1}}. {{answer.answer}}</ion-label> -->
-                          <ion-label (click)="selectAnswer(questions[key].answers[answerKey], questions[key])">Respuesta número uno</ion-label>
+                          <ion-label (click)="selectAnswer(questions[key].answers[answerKey], questions[key])">{{questions[key].answers[answerKey].text}}</ion-label>
                           <!-- <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio> -->
                       </ion-item>
         
@@ -51,9 +55,8 @@
               <ion-slide>
                 <h2>Final Score: {{score}}</h2>
         
-                <button (click)="restartQuiz()" ion-button full color="primary">Start Again</button>
-        
-            </ion-slide>
+                <button (click)="restartQuiz()" ion-button full color="primary">Start Again</button>       
+              </ion-slide>
         
           </ion-slides>
       </ion-col>

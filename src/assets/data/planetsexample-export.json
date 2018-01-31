@@ -3,7 +3,7 @@
     "quizPlanets" : {
       "dateUpdated" : "25/01/2018",
       "id" : 1,
-      "lastVersion" : 1,
+      "lastVersion" : 2,
       "name" : "quizPlanets"
     },
     "quizPlanetsYesNo" : {
@@ -23,11 +23,18 @@
       "id" : 4,
       "lastVersion" : 1,
       "name" : "quizStarsYesNo"
+    },
+    "quizMath" : {
+      "dateUpdated" : "31/01/2018",
+      "id" : 5,
+      "lastVersion" : 2,
+      "name" : "quizMath"
     }
   },
   "quizes" : {
     "quizPlanets" : {
       "id" : 1,
+      "lastVersion" : 2,
       "name" : "planets",
       "v1" : {
         "questions" : {
@@ -157,6 +164,7 @@
     },
     "quizPlanetsYesNo" : {
       "id" : 3,
+      "lastVersion" : 1,
       "name" : "planetsYesNo",
       "v1" : {
         "questions" : {
@@ -286,6 +294,7 @@
     },
     "quizStars" : {
       "id" : 2,
+      "lastVersion" : 1,
       "name" : "stars",
       "v1" : {
         "questions" : {
@@ -413,6 +422,7 @@
     },
     "quizStarsYesNo" : {
       "id" : 4,
+      "lastVersion" : 1,
       "name" : "starsYesNo",
       "v1" : {
         "questions" : {
@@ -539,6 +549,263 @@
         },
         "version" : 1
       }
+    },
+    "quizMath" : {
+      "id" : 1,
+      "lastVersion" : 2,
+      "name" : "math",
+      "v1" : {
+        "questions" : {
+          "question1" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "114"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "104"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "115"
+              }
+            },
+            "correctAnswer" : "114",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
+            "question" : "¿Cuánto es 43 + 71?"
+          },
+          "question2" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "86"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 2,
+                "selected" : false,
+                "text" : "96"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "106"
+              }
+            },
+            "correctAnswer" : "96",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
+            "question" : "¿Cuánto es 15 + 81?"
+          },
+          "question3" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "421"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "401"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 3,
+                "selected" : false,
+                "text" : "411"
+              }
+            },
+            "correctAnswer" : "411",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
+            "question" : "¿Cuánto es 177 + 234?"
+          },
+          "question4" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "502"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "512"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "492"
+              }
+            },
+            "correctAnswer" : "502",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
+            "question" : "¿Cuántos es 79 + 423?"
+          }
+        },
+        "version" : 1,
+        "tipo": "sumas"
+      }, 
+      "v2" : {
+        "questions" : {
+          "question1" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "39"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "29"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "49"
+              }
+            },
+            "correctAnswer" : "39",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
+            "question" : "¿Cuánto es 110 - 71?"
+          },
+          "question2" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "116"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 2,
+                "selected" : false,
+                "text" : "126"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "136"
+              }
+            },
+            "correctAnswer" : "126",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
+            "question" : "¿Cuánto es 213 - 87?"
+          },
+          "question3" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "297"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "277"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 3,
+                "selected" : false,
+                "text" : "287"
+              }
+            },
+            "correctAnswer" : "287",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
+            "question" : "¿Cuánto es 571 - 284?"
+          },
+          "question4" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "276"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "286"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "266"
+              }
+            },
+            "correctAnswer" : "276",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
+            "question" : "¿Cuántos es 703 - 427?"
+          }
+        },
+        "version" : 2,
+        "tipo": "restas"
+      }
     }
   },
   "userPoints" : {
@@ -557,22 +824,59 @@
         "v1" : {
           "puntuation" : 5,
           "version" : 1
-        }},
+        }
+      },
       "quizStars" : {
         "lastVersion" : 1,
         "puntuation" : 5,
         "v1" : {
           "puntuation" : 5,
           "version" : 1
-        }},
+        }
+      },
       "quizStarsYesNo" : {
         "lastVersion" : 1,
         "puntuation" : 5,
         "v1" : {
           "puntuation" : 5,
           "version" : 1
-        }},
+        }
+      },
       "userName" : "Fernando"
+    },
+    "RC1FdTtiASY7G7lbpQ669ac9hDa2" : {
+      "quizPlanets" : {
+        "lastVersion" : 2,
+        "userActualVersion" : 1,
+        "v1" : {
+          "puntuation" : 10
+        },
+        "v2" : {
+          "puntuation" : 0
+        }
+      },
+      "quizPlanetsYesNo" : {
+        "lastVersion" : 1,
+        "userActualVersion" : 1,
+        "v1" : {
+          "puntuation" : 0
+        }
+      },
+      "quizStars" : {
+        "lastVersion" : 1,
+        "userActualVersion" : 1,
+        "v1" : {
+          "puntuation" : 0
+        }
+      },
+      "quizStarsYesNo" : {
+        "lastVersion" : 1,
+        "userActualVersion" : 1,
+        "v1" : {
+          "puntuation" : 0
+        }
+      },
+      "userName" : "perdinand"
     },
     "calb3hHf1iVNXYQscUOEKar5Yhq1" : {
       "quizPlanets" : {
@@ -589,21 +893,24 @@
         "v1" : {
           "puntuation" : 15,
           "version" : 1
-        }},
+        }
+      },
       "quizStars" : {
         "lastVersion" : 1,
         "puntuation" : 15,
         "v1" : {
           "puntuation" : 15,
           "version" : 1
-        }},
+        }
+      },
       "quizStarsYesNo" : {
         "lastVersion" : 1,
         "puntuation" : 15,
         "v1" : {
           "puntuation" : 15,
           "version" : 1
-        }},
+        }
+      },
       "userName" : "Gabriel"
     },
     "lkd6urosLBWnoyP5HdKp1ydPW2n1" : {
@@ -613,28 +920,32 @@
         "v1" : {
           "puntuation" : 10,
           "version" : 1
-        }},
+        }
+      },
       "quizPlanetsYesNo" : {
         "lastVersion" : 1,
         "puntuation" : 10,
         "v1" : {
           "puntuation" : 10,
           "version" : 1
-        }},
+        }
+      },
       "quizStars" : {
         "lastVersion" : 1,
         "puntuation" : 10,
         "v1" : {
           "puntuation" : 10,
           "version" : 1
-        }},
+        }
+      },
       "quizStarsYesNo" : {
         "lastVersion" : 1,
         "puntuation" : 10,
         "v1" : {
           "puntuation" : 10,
           "version" : 1
-        }},
+        }
+      },
       "userName" : "Marta"
     }
   }

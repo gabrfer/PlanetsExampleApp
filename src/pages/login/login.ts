@@ -44,7 +44,7 @@ export class LoginPage {
 
     this.authService.signIn(this.username, this.password)
     .then(authState => {
-      this.quizPointsProvider.getAllUserPoints(authState.uid);
+      this.quizPointsProvider.getAllUserPoints(authState);
       loading.dismiss();
       this.navCtrl.setRoot(HomePage);
     })

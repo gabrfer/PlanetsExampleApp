@@ -13,6 +13,7 @@ export class QuizPage {
 
   @ViewChild('slides') slides: any;
 
+  quizName: String;
   hasAnswered: boolean = false;
   score: number = 0;
 
@@ -32,8 +33,9 @@ export class QuizPage {
   private answerCorrectColor: string = 'answerCorrect';
   private answerIncorrectColor: string = 'answerIncorrect';
 
-  constructor(public navCtrl: NavController, public dataService: DataProvider, private storage: Storage,
+  constructor(public navCtrl: NavController, public dataService: DataProvider, private storage: Storage, params: NavParams,
               public quizPointsProvider: QuizPointsProvider, public localStorageProvider: LocalStorageProvider) {
+                this.quizName = params.get('quizName');
   }
 
   toggleAnswerColor() {
@@ -44,11 +46,10 @@ export class QuizPage {
     
     this.slides.lockSwipes(true);
 
-
       this.localStorageProvider.getObject("userPoints").then((data) => {
-        this.userPoints = JSON.parse(data).filter(x => x.key == "quizPlanets")[0];
+        this.userPoints = JSON.parse(data).filter(x => x.key == this.quizName)[0];
 
-        this.dataService.getQuizPlanets().snapshotChanges().map(actions => {
+        this.dataService.getQuizByName(this.quizName, this.userPoints.userActualVersion + 1).snapshotChanges().map(actions => {
           return actions.map(action => (action.payload.val()));
         }).subscribe(items => {
             this.questions = items[0];
