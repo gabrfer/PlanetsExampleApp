@@ -16,11 +16,11 @@
 
   <ion-grid fixed>
     <ion-row>
-      <ion-col col-12 col-xs-12 col-sm-6 col-md-4 col-xl-3 (click)="showAlert(item)" *ngFor="let item of items">
+      <ion-col col-6 col-xs-6 col-sm-6 col-md-4 col-xl-3 (click)="showAlert(item)" *ngFor="let item of items">
           <ion-card>
-              <img src={{item.img}} height="200"/>
+              <img src={{item.img}} height="100vh"/>
               <ion-card-content>
-                  <ion-card-title>{{item.name}}</ion-card-title>                   
+                  <ion-card-title><p class="cardTitle">{{item.name}}</p></ion-card-title>                   
               </ion-card-content>
           </ion-card>
         </ion-col>

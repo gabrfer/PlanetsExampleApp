@@ -38,6 +38,25 @@ export class DataProvider {
       });
     }
     
+    /* Se recorre la lista de quizes en la base de datos, para comprobar los que le faltan
+     * al usuario, o las versiones de estos que le faltan 
+     * 
+     * La estructura de la rama en BD dedicada a los puntos del usuario es la siguiente:
+     * 
+     *   -Username
+     *        -QuizName
+     *            -QuizLastVersion: 3
+     *            -UserActualVersion: 1
+     *            -Version 1 { 
+     *                puntuation = 10
+     *             }
+     *            -Version 2 { 
+     *                puntuation = 25 
+     *             }
+     *            -Version 3 { 
+     *                puntuation = 30 
+     *             }
+     */
     this.db.list('quizInfo').snapshotChanges().map(actions => {
       return actions.map(action => (action.payload.val()));
     }).subscribe(items => {
@@ -45,9 +64,13 @@ export class DataProvider {
       items.forEach((quizInfo) => {
           let quizVersion:number = quizInfo.lastVersion;
 
+          /* Se busca si el usuario tiene una entrada en la base de datos con cada Quiz */
           this.db.object('/userPoints/'+userId+'/'+quizInfo.name).snapshotChanges().take(1)
             .subscribe((obj) => {
               if (obj.hasOwnProperty('$value') && !obj['$value']) {
+                /* El usuario tiene entrada asociada al quiz. Se pasa a comprobar las versiones del mismo que le faltan. 
+                 * Y se agregan entradas a la versiiones que le faltan.
+                 */
                 let userLastQuizVersion:number = items[0].lastVersion;
 
                 for (let i = userLastQuizVersion; i < quizVersion; i++){
@@ -56,11 +79,13 @@ export class DataProvider {
                   });
                 }             
              } else {
+               /* El usuario no tiene entrada asociada al quiz. Se crean la entradas de las versiones del Quiz que le faltan. */
                 this.db.list('/userPoints/'+userId).set(quizInfo.name, {
                   lastVersion: quizVersion,
-                  userActualVersion: 1
+                  userActualVersion: 0
                 });
                 
+                /* Cada versión del Quiz se inicializa con puntuación igual a 0 */
                 for (let i = 1; i <= quizVersion; i++){
                   this.db.list('/userPoints/'+userId+'/'+quizInfo.name).set('/v'+i, {
                     puntuation: 0

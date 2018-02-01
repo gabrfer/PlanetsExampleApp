@@ -54,6 +54,7 @@ export class QuizPage {
         }).subscribe(items => {
             this.questions = items[0];
             this.questionsKeys = Object.keys(items[0]);
+            this.percentegePerQuestion = 100 / this.questionsKeys.length;
           });
       });       
   }

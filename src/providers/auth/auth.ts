@@ -8,7 +8,7 @@ export class AuthProvider{
     }
 
     signIn(username: string, password: string){
-        const updateUserData = (uid) => this.dataProvider.createUserQuizInfo(uid, true);
+        const updateUserData = (uid) => this.dataProvider.createUserQuizInfo(uid, false);
 
         let signinUser = this.afAuth.auth.signInWithEmailAndPassword(username,password)
         .then(function(user) {
