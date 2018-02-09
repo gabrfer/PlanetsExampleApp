@@ -47,9 +47,17 @@ $colors: (
 );
 
 
-$text-color:        rgb(0, 0, 0);
-$background-color:  #eceff5;
+$text-color:        rgb(115, 185, 164);
 
+$toolbar-md-title-text-color: rgb(245, 237, 237);
+$toolbar-ios-title-text-color: rgb(245, 237, 237);
+$toolbar-wp-title-text-color: rgb(245, 237, 237);
+
+$text-input-md-highlight-color-invalid: #f53838;
+$text-input-md-highlight-color-valid: #16d4a5;
+$text-input-md-show-invalid-highlight: #f53838;
+$text-input-md-highlight-color: #16d4a5;
+$text-input-md-show-valid-highlight: #eceff5;
 
 // App iOS Variables
 // --------------------------------------------------

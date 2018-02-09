@@ -21,13 +21,26 @@ page-signup {
         align-self: center;
     }
 
+    ion-item {
+        background-color: transparent;
+    }
+
+    ion-item.item {
+        background-color: transparent;
+        margin-top: 10px;
+    }
+
     ion-icon{
         font-size: 100px;
         color: white;
     }
 
+    ion-input{
+        //color: beige;
+    }
+
     .image--background {
-        background: url('../../assets/imgs/space-background.png') no-repeat center center fixed;
+        background: url('../assets/imgs/space-background.png') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -39,11 +52,29 @@ page-signup {
         max-height: 100%;
         max-width: 100%;
      }
+     
+    .circleImage {
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        height: 40%; 
+        width: 40%;
+        background-color: linen;
+    }
+
+    .buttonPicture {
+        width: 35%;
+        background-color: transparent;
+    }
 
     .buttonLarge {
         justify-content: center;
         width: 100%;
-        margin-top: 10%;
+        margin-top: 20%;
+        background-color: rgb(146, 199, 186);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
     .ionItemBox {
@@ -54,7 +85,7 @@ page-signup {
       }
 
       .ionItemBox.item {
-        background-color: rgba(255, 255, 255, 0.514);
+        //background-color: rgba(255, 255, 255, 0.514);
         margin-bottom: 1px;
         margin-top: 10px;
         .label {
@@ -64,28 +95,37 @@ page-signup {
         }
       }
 
-    .ionItemTransparent {
-        background-color: rgba(255, 255, 255, 0);
+      .ionItemBoxTransparent {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: transparent;
+      }
+
+    .ionItemTransparent.item {
         margin-bottom: 1px;
         margin-top: 10px;
+        background-color: transparent;
         .label {
+            background-color: transparent;
             width: 10%;
-            color: rgba(0, 0, 0, 0.6);
+            //color: rgb(255, 255, 255);
             font-size: 1.2em;
           }
     }
 
     .rowHeader{
-        flex:2;
-        background-color: rgba(85, 107, 47, 0);
+        flex:1;
+        //background-color: rgba(85, 107, 47, 0)
     }
 
     .rowContent{
-        flex:4;
+        flex:6;
     }
 
     .rowFooter{
-        flex:2;
+        flex:1;
     }
 
 }

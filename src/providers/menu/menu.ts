@@ -4,7 +4,7 @@ import { HomePage } from '../../pages/home/home';
 import { Component } from '@angular/compiler/src/core';
 import { Page } from 'ionic-angular/navigation/nav-util';
 import { QuizTopUsersPage } from '../../pages/quiz-top-users/quiz-top-users';
-import { QuizUserHistoryPage } from '../../pages/quiz-user-history/quiz-user-history';
+import { UserInfoPage } from '../../pages/user-info/user-info';
 import { PlanetsPage } from '../../pages/planets/planets';
 import { QuizPage } from '../../pages/quiz/quiz';
 import { LoginPage } from '../../pages/login/login';
@@ -63,8 +63,8 @@ export class MenuProvider {
         pageObject = QuizTopUsersPage;
         break;
       }
-      case "QuizUserHistoryPage": {
-        pageObject = QuizUserHistoryPage;
+      case "UserInfoPage": {
+        pageObject = UserInfoPage;
         break;
       }
       case "LoginPage": {

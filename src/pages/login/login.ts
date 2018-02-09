@@ -59,7 +59,7 @@ export class LoginPage {
   }
 
   signUp(){
-    this.navCtrl.setRoot(SignupPage);
+    this.navCtrl.push(SignupPage);
   }
 
 }

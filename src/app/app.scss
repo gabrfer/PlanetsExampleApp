@@ -14,6 +14,12 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.toolbar-background {
+  background-color: rgb(149, 194, 183);
+  color: whitesmoke;
+}
+
 .icon-left {
     font-size: 26px; // Your size here
     vertical-align: middle;
@@ -28,4 +34,17 @@
     vertical-align: middle;
 }
 
+.text-input::-moz-placeholder {
+    color: white;
+  }
+  
+  .text-input:-ms-input-placeholder {
+    color: white;
+  }
+  
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: white;
+  }
+  
 .scroll-content { padding-bottom: 0!important; }

@@ -12,21 +12,29 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="home" overflow-scroll=“true”>
 
-    <ion-grid style="height: 100%; width: 100%" fixed>
-        <ion-row class="logoRow" style="height: 85%">
-          <ion-col col-12 col-xs-12 col-sm-12 col-md-12 col-xl-12>
-            <!-- <img id="animal" src="assets/imgs/rocket-logo-lg.png" align="center"/>     -->
-            <img id="animal" src="http://via.placeholder.com/400x800" align="center"/>           
-          </ion-col>
-        </ion-row>
+  <div class="fullscreen-bg">
+		<video class="fullscreen-bg__video" autoplay loop muted webkit-playsinline>
+      <source src="assets/vids/Flying-Birds/MP4/Flying-Birds.mp4" type="video/mp4"/>
+      <source src="assets/vids/Flying-Birds/WEBM/Flying-Birds.webm" type="video/webm" />
+    </video>
+	</div>
+	<div class="center animated zoomin">
 
-          <ion-row class="infoRow" style="height: 15%">
-              <ion-col col-12 col-xs-12 col-sm-12 col-md-12 col-xl-12 align="center">
-                <p align="center">LearningApp <strong>v0.1.0</strong></p>
-              </ion-col>
-            </ion-row>
-    </ion-grid>
+		<h1>Learn App</h1>
+		<h2>Fast. Easy. Cheap.</h2>
+	</div>
+
+    <!-- <div class="video-container">
+      <div class="filter"></div>
+      <video autoplay loop class="fillWidth">
+          <source src="assets/vids/Flying-Birds/MP4/Flying-Birds.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          <source src="assets/vids/Flying-Birds/WEBM/Flying-Birds.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+      </video>
+      <div class="poster hidden">
+          <img src="assets/vids/Flying-Birds/Snapshots/Flying-Birds.jpg" alt="">
+      </div>
+  </div> -->
 
 </ion-content>

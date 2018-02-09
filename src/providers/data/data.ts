@@ -31,10 +31,11 @@ export class DataProvider {
     return this.db.list('quizInfo');
   }
 
-  createUserQuizInfo(userId: String, newUser: Boolean, displayName: String = "") {
+  createUserQuizInfo(userId: String, newUser: Boolean, displayName: String = "", imageData: any = null) {
     if (newUser) {
       this.db.list('/userPoints/').set(""+userId,{
-        userName: displayName
+        displayName: displayName,
+        imgAvatar: imageData
       });
     }
     

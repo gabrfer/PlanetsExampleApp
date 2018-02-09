@@ -1,9 +1,9 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login de usuario</ion-title>
     <ion-buttons end>
       <button ion-button (click)="signUp()">
-      Sign Up
+      REGISTRO
       </button>
       </ion-buttons>
   </ion-navbar>
@@ -11,32 +11,29 @@
 
 <ion-content>
   <ion-grid style="height: 100%" text-center>
-    <ion-row class="rowHeader">
-      <ion-col col-2></ion-col>
-        <ion-col col-8>
-          <h1>
-            <ion-icon name="trophy"></ion-icon>
-          </h1>             
-        </ion-col>
-      <ion-col col-2></ion-col>
-    </ion-row>
     <ion-row class="rowContent" justify-content-center align-items-center>
-        <ion-list>
-            <ion-label class="labelCenter">LOGIN DUMMY</ion-label>
-
-            <ion-item padding>
-              <!-- <ion-label floating>Username</ion-label> -->
-              <ion-input type="text" [(ngModel)]="username" name="username" placeholder="Usuario"></ion-input>
-            </ion-item> 
-
-            <ion-item padding>
-              <!-- <ion-label floating>Password</ion-label> -->
-              <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña"></ion-input>
-            </ion-item>
-
-            <button class="buttonLarge" ion-button color="darkGreenButton" (click)="signIn()" text-center>Login</button>
-
-        </ion-list>
+        <ion-col col-2></ion-col>
+        <ion-col col-8>
+            <ion-list>
+                <h1>
+                    <ion-icon name="trophy"></ion-icon>
+                  </h1>  
+                <ion-label class="labelCenter">LOGIN DUMMY</ion-label>
+    
+                <ion-item padding>
+                  <ion-label fixed>Username</ion-label>
+                  <ion-input type="text" [(ngModel)]="username"></ion-input>
+                </ion-item> 
+    
+                <ion-item padding>
+                  <ion-label fixed>Password</ion-label>
+                  <ion-input type="password" [(ngModel)]="password"></ion-input>
+                </ion-item>
+    
+                <button class="buttonLarge" ion-button color="darkGreenButton" (click)="signIn()" text-center>Login</button>
+            </ion-list>
+          </ion-col>        
+        <ion-col col-2></ion-col>
   </ion-row>
     <ion-row class="rowFooter" justify-content-center align-items-center>
       </ion-row>

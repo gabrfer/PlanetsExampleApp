@@ -31,9 +31,10 @@ import { QuizYesnoPage } from '../pages/quiz-yesno/quiz-yesno';
 import { QuizPointsProvider } from '../providers/quiz-points/quiz-points';
 import { StarsPage } from '../pages/stars/stars';
 import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
-import { QuizUserHistoryPage } from '../pages/quiz-user-history/quiz-user-history';
+import { UserInfoPage } from '../pages/user-info/user-info';
 import { QuizTopUsersPage } from '../pages/quiz-top-users/quiz-top-users';
 import { LocalStorageProvider } from '../providers/local-storage/local-storage';
+import { Camera } from '@ionic-native/camera';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyClU8HlHob8iRg5FDNHleDm-0HqsYj3Mtw",
@@ -51,7 +52,7 @@ export const firebaseConfig = {
     ContactPage,
     QuizPage,
     QuizYesnoPage,
-    QuizUserHistoryPage,
+    UserInfoPage,
     QuizTopUsersPage,
     HomePage,
     MenuPage,
@@ -68,7 +69,10 @@ export const firebaseConfig = {
     HttpClientModule,
     HttpModule,
     IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp, { scrollAssist: false, autoFocusAssist: false } ),
+    IonicModule.forRoot(MyApp, { 
+      scrollPadding: false,
+      scrollAssist: true,
+      autoFocusAssist: false } ),
     //IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
@@ -87,7 +91,7 @@ export const firebaseConfig = {
     MenuPage,
     PlanetsPage,
     StarsPage,
-    QuizUserHistoryPage,
+    UserInfoPage,
     QuizTopUsersPage
   ],
   providers: [
@@ -99,7 +103,8 @@ export const firebaseConfig = {
     MenuProvider,
     QuizPointsProvider,
     LocalStorageProvider,
-    Keyboard
+    Keyboard,
+    Camera
   ]
 })
 export class AppModule {}

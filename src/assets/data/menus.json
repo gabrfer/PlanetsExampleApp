@@ -33,7 +33,7 @@
         "subcategory":"Quiz", "icon": "help", "hasChilds": "true", "menuClose": "right",
         "childs": [
           {
-            "child":"Ciencia", "component": "QuizPage", "quizName": "quizPlanets", "hasChilds": "false", "menuClose": "left"
+            "child":"Ciencia", "component": "QuizPage", "quizName": "quizScience", "hasChilds": "false", "menuClose": "left"
           },
           {
             "child":"Matemáticas", "component": "QuizPage", "quizName": "quizMath", "hasChilds": "false", "menuClose": "left"
@@ -57,6 +57,6 @@
     ]
   },
   {
-    "category":"Clasificaciones", "component": "TabsPage", "icon": "trophy", "hasChilds": "false", "menuClose": "left"
+    "category":"Información de usuario", "component": "TabsPage", "icon": "information-circle", "hasChilds": "false", "menuClose": "left"
   }
 ]

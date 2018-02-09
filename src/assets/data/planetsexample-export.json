@@ -1,38 +1,283 @@
 {
   "quizInfo" : {
-    "quizPlanets" : {
+    "quizMath" : {
+      "dateUpdated" : "31/01/2018",
+      "id" : 3,
+      "lastVersion" : 1,
+      "name" : "quizMath"
+    },
+    "quizScience" : {
       "dateUpdated" : "25/01/2018",
       "id" : 1,
       "lastVersion" : 2,
       "name" : "quizPlanets"
     },
-    "quizPlanetsYesNo" : {
+    "quizScienceYesNo" : {
       "dateUpdated" : "25/01/2018",
       "id" : 3,
       "lastVersion" : 1,
       "name" : "quizPlanetsYesNo"
-    },
-    "quizStars" : {
-      "dateUpdated" : "25/01/2018",
-      "id" : 2,
-      "lastVersion" : 1,
-      "name" : "quizStars"
-    },
-    "quizStarsYesNo" : {
-      "dateUpdated" : "25/01/2018",
-      "id" : 4,
-      "lastVersion" : 1,
-      "name" : "quizStarsYesNo"
-    },
-    "quizMath" : {
-      "dateUpdated" : "31/01/2018",
-      "id" : 5,
-      "lastVersion" : 2,
-      "name" : "quizMath"
     }
   },
   "quizes" : {
-    "quizPlanets" : {
+    "quizMath" : {
+      "id" : 1,
+      "lastVersion" : 2,
+      "name" : "math",
+      "v1" : {
+        "questions" : {
+          "question1" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "114"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "104"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "115"
+              }
+            },
+            "correctAnswer" : "114",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/blackboard1.png?alt=media&token=f6d12065-a830-48aa-b154-061e2329cad4",
+            "question" : "¿Cuánto es 43 + 71?"
+          },
+          "question2" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "86"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 2,
+                "selected" : false,
+                "text" : "96"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "106"
+              }
+            },
+            "correctAnswer" : "96",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/blackboard1.png?alt=media&token=f6d12065-a830-48aa-b154-061e2329cad4",
+            "question" : "¿Cuánto es 15 + 81?"
+          },
+          "question3" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "421"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "401"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 3,
+                "selected" : false,
+                "text" : "411"
+              }
+            },
+            "correctAnswer" : "411",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/blackboard1.png?alt=media&token=f6d12065-a830-48aa-b154-061e2329cad4",
+            "question" : "¿Cuánto es 177 + 234?"
+          },
+          "question4" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "502"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "512"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "492"
+              }
+            },
+            "correctAnswer" : "502",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/blackboard1.png?alt=media&token=f6d12065-a830-48aa-b154-061e2329cad4",
+            "question" : "¿Cuántos es 79 + 423?"
+          }
+        },
+        "tipo" : "sumas",
+        "version" : 1
+      },
+      "v2" : {
+        "questions" : {
+          "question1" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "39"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "29"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "49"
+              }
+            },
+            "correctAnswer" : "39",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/blackboard1.png?alt=media&token=f6d12065-a830-48aa-b154-061e2329cad4",
+            "question" : "¿Cuánto es 110 - 71?"
+          },
+          "question2" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "116"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 2,
+                "selected" : false,
+                "text" : "126"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "136"
+              }
+            },
+            "correctAnswer" : "126",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/blackboard1.png?alt=media&token=f6d12065-a830-48aa-b154-061e2329cad4",
+            "question" : "¿Cuánto es 213 - 87?"
+          },
+          "question3" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "297"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "277"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 3,
+                "selected" : false,
+                "text" : "287"
+              }
+            },
+            "correctAnswer" : "287",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/blackboard1.png?alt=media&token=f6d12065-a830-48aa-b154-061e2329cad4",
+            "question" : "¿Cuánto es 571 - 284?"
+          },
+          "question4" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "276"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "286"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "266"
+              }
+            },
+            "correctAnswer" : "276",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/blackboard1.png?alt=media&token=f6d12065-a830-48aa-b154-061e2329cad4",
+            "question" : "¿Cuántos es 703 - 427?"
+          }
+        },
+        "tipo" : "restas",
+        "version" : 2
+      }
+    },
+    "quizScience" : {
       "id" : 1,
       "lastVersion" : 2,
       "name" : "planets",
@@ -160,9 +405,132 @@
           }
         },
         "version" : 1
+      },
+      "v2" : {
+        "questions" : {
+          "question1" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "Sirio"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "Polaris"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 3,
+                "selected" : false,
+                "text" : "Canopus"
+              }
+            },
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/canopus.jpg?alt=media&token=581bc366-3ca2-4c80-a199-706a07b97b8f",
+            "question" : "¿Que estrella es?"
+          },
+          "question2" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "Canopus"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 2,
+                "selected" : false,
+                "text" : "Aldebaran"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "Arturo"
+              }
+            },
+            "correctAnswer" : "Jupiter",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/aldebaran.jpg?alt=media&token=b729afcc-6138-40ad-b38f-f95bff55ab7a",
+            "question" : "¿Que estrella es?"
+          },
+          "question3" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 1,
+                "selected" : false,
+                "text" : "Betelgeuse"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 2,
+                "selected" : false,
+                "text" : "Capela"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "Rigel"
+              }
+            },
+            "correctAnswer" : "Jupiter",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/betelgeuse.jpg?alt=media&token=9ebc88f8-be5e-4f85-becc-7bf2c5181d32",
+            "question" : "¿Que estrella es?"
+          },
+          "question4" : {
+            "answers" : {
+              "answer1" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 1,
+                "selected" : false,
+                "text" : "Sirio"
+              },
+              "answer2" : {
+                "color" : "answer",
+                "correct" : true,
+                "id" : 2,
+                "selected" : false,
+                "text" : "Vega"
+              },
+              "answer3" : {
+                "color" : "answer",
+                "correct" : false,
+                "id" : 3,
+                "selected" : false,
+                "text" : "Polaris"
+              }
+            },
+            "correctAnswer" : "Jupiter",
+            "flashCardFlipped" : false,
+            "id" : 1,
+            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/vega.png?alt=media&token=aacbbd55-589c-461c-82f7-6152a1e3db76",
+            "question" : "¿Que estrella es?"
+          }
+        },
+        "version" : 1
       }
     },
-    "quizPlanetsYesNo" : {
+    "quizScienceYesNo" : {
       "id" : 3,
       "lastVersion" : 1,
       "name" : "planetsYesNo",
@@ -291,662 +659,9 @@
         },
         "version" : 1
       }
-    },
-    "quizStars" : {
-      "id" : 2,
-      "lastVersion" : 1,
-      "name" : "stars",
-      "v1" : {
-        "questions" : {
-          "question1" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "Sirio"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "Polaris"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 3,
-                "selected" : false,
-                "text" : "Canopus"
-              }
-            },
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/canopus.jpg?alt=media&token=581bc366-3ca2-4c80-a199-706a07b97b8f",
-            "question" : "¿Que estrella es?"
-          },
-          "question2" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "Canopus"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 2,
-                "selected" : false,
-                "text" : "Aldebaran"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "Arturo"
-              }
-            },
-            "correctAnswer" : "Jupiter",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/aldebaran.jpg?alt=media&token=b729afcc-6138-40ad-b38f-f95bff55ab7a",
-            "question" : "¿Que estrella es?"
-          },
-          "question3" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 1,
-                "selected" : false,
-                "text" : "Betelgeuse"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "Capela"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "Rigel"
-              }
-            },
-            "correctAnswer" : "Jupiter",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/betelgeuse.jpg?alt=media&token=9ebc88f8-be5e-4f85-becc-7bf2c5181d32",
-            "question" : "¿Que estrella es?"
-          },
-          "question4" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "Sirio"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 2,
-                "selected" : false,
-                "text" : "Vega"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "Polaris"
-              }
-            },
-            "correctAnswer" : "Jupiter",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/vega.png?alt=media&token=aacbbd55-589c-461c-82f7-6152a1e3db76",
-            "question" : "¿Que estrella es?"
-          }
-        },
-        "version" : 1
-      }
-    },
-    "quizStarsYesNo" : {
-      "id" : 4,
-      "lastVersion" : 1,
-      "name" : "starsYesNo",
-      "v1" : {
-        "questions" : {
-          "question1" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "Jupiter"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "Marte"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "Saturno"
-              }
-            },
-            "correctAnswer" : "Jupiter",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Que planeta es?"
-          },
-          "question2" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "Jupiter"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "Marte"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "Saturno"
-              }
-            },
-            "correctAnswer" : "Jupiter",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Que planeta es?"
-          },
-          "question3" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "Jupiter"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "Marte"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "Saturno"
-              }
-            },
-            "correctAnswer" : "Jupiter",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Que planeta es?"
-          },
-          "question4" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "Jupiter"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "Marte"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "Saturno"
-              }
-            },
-            "correctAnswer" : "Jupiter",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Que planeta es?"
-          }
-        },
-        "version" : 1
-      }
-    },
-    "quizMath" : {
-      "id" : 1,
-      "lastVersion" : 2,
-      "name" : "math",
-      "v1" : {
-        "questions" : {
-          "question1" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 1,
-                "selected" : false,
-                "text" : "114"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "104"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "115"
-              }
-            },
-            "correctAnswer" : "114",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Cuánto es 43 + 71?"
-          },
-          "question2" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "86"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 2,
-                "selected" : false,
-                "text" : "96"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "106"
-              }
-            },
-            "correctAnswer" : "96",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Cuánto es 15 + 81?"
-          },
-          "question3" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "421"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "401"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 3,
-                "selected" : false,
-                "text" : "411"
-              }
-            },
-            "correctAnswer" : "411",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Cuánto es 177 + 234?"
-          },
-          "question4" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 1,
-                "selected" : false,
-                "text" : "502"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "512"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "492"
-              }
-            },
-            "correctAnswer" : "502",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Cuántos es 79 + 423?"
-          }
-        },
-        "version" : 1,
-        "tipo": "sumas"
-      }, 
-      "v2" : {
-        "questions" : {
-          "question1" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 1,
-                "selected" : false,
-                "text" : "39"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "29"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "49"
-              }
-            },
-            "correctAnswer" : "39",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Cuánto es 110 - 71?"
-          },
-          "question2" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "116"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 2,
-                "selected" : false,
-                "text" : "126"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "136"
-              }
-            },
-            "correctAnswer" : "126",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Cuánto es 213 - 87?"
-          },
-          "question3" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 1,
-                "selected" : false,
-                "text" : "297"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "277"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 3,
-                "selected" : false,
-                "text" : "287"
-              }
-            },
-            "correctAnswer" : "287",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Cuánto es 571 - 284?"
-          },
-          "question4" : {
-            "answers" : {
-              "answer1" : {
-                "color" : "answer",
-                "correct" : true,
-                "id" : 1,
-                "selected" : false,
-                "text" : "276"
-              },
-              "answer2" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 2,
-                "selected" : false,
-                "text" : "286"
-              },
-              "answer3" : {
-                "color" : "answer",
-                "correct" : false,
-                "id" : 3,
-                "selected" : false,
-                "text" : "266"
-              }
-            },
-            "correctAnswer" : "276",
-            "flashCardFlipped" : false,
-            "id" : 1,
-            "imgURL" : "https://firebasestorage.googleapis.com/v0/b/planetsexample.appspot.com/o/jupiter-surface.jpg?alt=media&token=c0ef0420-a21c-4900-97cf-c58fd53b7506",
-            "question" : "¿Cuántos es 703 - 427?"
-          }
-        },
-        "version" : 2,
-        "tipo": "restas"
-      }
     }
   },
   "userPoints" : {
-    "Ldn7lVujDFaFouGNbw0ieVBbK6r2" : {
-      "quizPlanets" : {
-        "lastVersion" : 1,
-        "puntuation" : 5,
-        "v1" : {
-          "puntuation" : 5,
-          "version" : 1
-        }
-      },
-      "quizPlanetsYesNo" : {
-        "lastVersion" : 1,
-        "puntuation" : 5,
-        "v1" : {
-          "puntuation" : 5,
-          "version" : 1
-        }
-      },
-      "quizStars" : {
-        "lastVersion" : 1,
-        "puntuation" : 5,
-        "v1" : {
-          "puntuation" : 5,
-          "version" : 1
-        }
-      },
-      "quizStarsYesNo" : {
-        "lastVersion" : 1,
-        "puntuation" : 5,
-        "v1" : {
-          "puntuation" : 5,
-          "version" : 1
-        }
-      },
-      "userName" : "Fernando"
-    },
-    "RC1FdTtiASY7G7lbpQ669ac9hDa2" : {
-      "quizPlanets" : {
-        "lastVersion" : 2,
-        "userActualVersion" : 1,
-        "v1" : {
-          "puntuation" : 10
-        },
-        "v2" : {
-          "puntuation" : 0
-        }
-      },
-      "quizPlanetsYesNo" : {
-        "lastVersion" : 1,
-        "userActualVersion" : 1,
-        "v1" : {
-          "puntuation" : 0
-        }
-      },
-      "quizStars" : {
-        "lastVersion" : 1,
-        "userActualVersion" : 1,
-        "v1" : {
-          "puntuation" : 0
-        }
-      },
-      "quizStarsYesNo" : {
-        "lastVersion" : 1,
-        "userActualVersion" : 1,
-        "v1" : {
-          "puntuation" : 0
-        }
-      },
-      "userName" : "perdinand"
-    },
-    "calb3hHf1iVNXYQscUOEKar5Yhq1" : {
-      "quizPlanets" : {
-        "lastVersion" : 1,
-        "puntuation" : 15,
-        "v1" : {
-          "puntuation" : 15,
-          "version" : 1
-        }
-      },
-      "quizPlanetsYesNo" : {
-        "lastVersion" : 1,
-        "puntuation" : 15,
-        "v1" : {
-          "puntuation" : 15,
-          "version" : 1
-        }
-      },
-      "quizStars" : {
-        "lastVersion" : 1,
-        "puntuation" : 15,
-        "v1" : {
-          "puntuation" : 15,
-          "version" : 1
-        }
-      },
-      "quizStarsYesNo" : {
-        "lastVersion" : 1,
-        "puntuation" : 15,
-        "v1" : {
-          "puntuation" : 15,
-          "version" : 1
-        }
-      },
-      "userName" : "Gabriel"
-    },
-    "lkd6urosLBWnoyP5HdKp1ydPW2n1" : {
-      "quizPlanets" : {
-        "lastVersion" : 1,
-        "puntuation" : 10,
-        "v1" : {
-          "puntuation" : 10,
-          "version" : 1
-        }
-      },
-      "quizPlanetsYesNo" : {
-        "lastVersion" : 1,
-        "puntuation" : 10,
-        "v1" : {
-          "puntuation" : 10,
-          "version" : 1
-        }
-      },
-      "quizStars" : {
-        "lastVersion" : 1,
-        "puntuation" : 10,
-        "v1" : {
-          "puntuation" : 10,
-          "version" : 1
-        }
-      },
-      "quizStarsYesNo" : {
-        "lastVersion" : 1,
-        "puntuation" : 10,
-        "v1" : {
-          "puntuation" : 10,
-          "version" : 1
-        }
-      },
-      "userName" : "Marta"
-    }
+
   }
 }

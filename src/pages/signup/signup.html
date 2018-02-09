@@ -6,43 +6,44 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Sign Up</ion-title>
+    <ion-title>Registro de usuario</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="image--background" padding>
+<ion-content class="image--background" scroll="true" padding>
 
     <ion-grid text-center> 
-        <ion-row class="rowHeader">
-          <ion-col col-2></ion-col>
-          <ion-col col-8>
-              <h1>
-                  <ion-icon name="trophy"></ion-icon>
-              </h1>             
-          </ion-col>
-          <ion-col col-2></ion-col>
-        </ion-row>
+        
         <ion-row class="rowContent">
-          <ion-col col-2></ion-col>
-          <ion-col col-8>  
+          <ion-col col-1></ion-col>
+          <ion-col col-10>             
             <ion-list>
-              <ion-item class="ionItemBox">
-                <ion-input type="text" [(ngModel)]="displayname" placeholder="Nombre a mostrar"></ion-input>
+                <a (click)="takePicture()">
+                    <img class="circleImage" [src]="base64Image" item-right *ngIf="base64Image"/>
+                </a>
+              <ion-item>
+                <ion-label fixed>Usuario</ion-label>
+                <ion-input type="text" [(ngModel)]="displayname"></ion-input>
               </ion-item>
-              <ion-item class="ionItemBox">
-                <ion-input type="text" [(ngModel)]="username" placeholder="Usuario"></ion-input>
+              <ion-item>
+                  <ion-label fixed>Nombre</ion-label>
+                <ion-input type="text" [(ngModel)]="username"></ion-input>
               </ion-item>
-              <ion-item class="ionItemBox">
-                <ion-input type="password" [(ngModel)]="password" placeholder="Contraseña"></ion-input>
+              <ion-item>
+                  <ion-label fixed>Contraseña</ion-label>
+                <ion-input type="password" [(ngModel)]="password"></ion-input>
               </ion-item>
-              <ion-item class="ionItemBox">
-                <ion-input type="password" [(ngModel)]="passwordConfirm" placeholder="Repita contraseña"></ion-input>
+              <ion-item>
+                  <ion-label fixed>Confirma con.</ion-label>
+                <ion-input type="password" [(ngModel)]="passwordConfirm" name="passwordConfirm"></ion-input>
               </ion-item>    
-                <button ion-button class="buttonLarge" (click)=" onSignUp()" color="darkGreenButton" text-center>Sign Up</button>        
+                <button ion-button class="buttonLarge" (click)="onSignUp()" text-center>Sign Up</button>     
             </ion-list>
           </ion-col>   
-          <ion-col col-2></ion-col>        
+          <ion-col col-1></ion-col>        
         </ion-row> 
+
+        <ion-row class="rowFooter"></ion-row>
     </ion-grid>
 
 </ion-content>

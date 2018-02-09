@@ -19,9 +19,9 @@ export class AuthProvider{
         return signinUser;
     }
 
-    signUp(displayname: string, username: string, password: string){
+    signUp(displayname: string, username: string, password: string, imageData: any){
 
-        const createUserData = (uid, displayname) => this.dataProvider.createUserQuizInfo(uid, true, displayname);
+        const createUserData = (uid, displayname) => this.dataProvider.createUserQuizInfo(uid, true, displayname, imageData);
 
         let signupUser = this.afAuth.auth.createUserWithEmailAndPassword(username, password)
         .then(function(user) {
