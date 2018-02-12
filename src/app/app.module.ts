@@ -26,6 +26,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { MenuPage } from '../pages/menu/menu';
 import { PlanetsPage } from '../pages/planets/planets';
+import { AstronomyPage } from '../pages/astronomy/astronomy';
 import { MenuProvider } from '../providers/menu/menu';
 import { QuizYesnoPage } from '../pages/quiz-yesno/quiz-yesno';
 import { QuizPointsProvider } from '../providers/quiz-points/quiz-points';
@@ -58,6 +59,7 @@ export const firebaseConfig = {
     MenuPage,
     TabsPage,
     SignupPage,
+    AstronomyPage,
     PlanetsPage,
     StarsPage,
     FlashCardComponent,
@@ -89,6 +91,7 @@ export const firebaseConfig = {
     TabsPage,
     SignupPage,
     MenuPage,
+    AstronomyPage,
     PlanetsPage,
     StarsPage,
     UserInfoPage,

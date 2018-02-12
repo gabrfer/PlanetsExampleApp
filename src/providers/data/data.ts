@@ -98,6 +98,13 @@ export class DataProvider {
       });
   }
 
+  updateUserQuizInfo(userId: String, Boolean, displayName: String = "", imageData: any = null) {
+      this.db.list('/userPoints/').set(""+userId,{
+        displayName: displayName,
+        imgAvatar: imageData
+      });
+  }
+
   load(){
 
     if(this.data){

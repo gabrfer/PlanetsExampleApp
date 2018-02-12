@@ -12,6 +12,7 @@ import { SignupPage } from '../../pages/signup/signup';
 import { QuizYesnoPage } from '../../pages/quiz-yesno/quiz-yesno';
 import { StarsPage } from '../../pages/stars/stars';
 import { TabsPage } from '../../pages/tabs/tabs';
+import { AstronomyPage } from '../../pages/astronomy/astronomy';
 
 /*
   Generated class for the MenuServiceProvider provider.
@@ -73,6 +74,10 @@ export class MenuProvider {
       }
       case "SignupPage": {
         pageObject = SignupPage;
+        break;
+      }
+      case "AstronomyPage": {
+        pageObject = AstronomyPage;
         break;
       }
       default: {

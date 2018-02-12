@@ -6,7 +6,7 @@
         "subcategory":"Ciencia", "icon": "planet", "hasChilds": "true", "menuClose": "right",
         "childs": [
           {
-            "child":"Planetas", "component": "PlanetsPage", "icon": "planet", "hasChilds": "false", "menuClose": "left"
+            "child":"Astronomia", "component": "AstronomyPage", "icon": "planet", "hasChilds": "false", "menuClose": "left"
           },
           {
             "child":"Estrellas", "component": "StarsPage", "icon": "star", "hasChilds": "false", "menuClose": "left"

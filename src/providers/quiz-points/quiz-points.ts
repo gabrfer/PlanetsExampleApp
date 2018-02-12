@@ -2,13 +2,14 @@ import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AuthProvider } from '../auth/auth';
+import { DataProvider } from '../../providers/data/data';
 import { LocalStorageProvider } from '../../providers/local-storage/local-storage';
 
 @Injectable()
 export class QuizPointsProvider {
 
   constructor(private storage: Storage, private db: AngularFireDatabase, private localStorageProvider: LocalStorageProvider, 
-              private authProvider: AuthProvider) {
+              private authProvider: AuthProvider, private dataProvider: DataProvider) {
 
   }
 
@@ -53,6 +54,13 @@ export class QuizPointsProvider {
       this.db.list('/userPoints/'+authState.uid+"/"+quizCode).set("v"+newVersion,{
         puntuation
       });
+    });
+  }
+
+  updateUserQuizInfo(displayName: String = "", imageData: any = null){
+    this.authProvider.getCurrentUser().subscribe(authState => {
+
+      this.dataProvider.updateUserQuizInfo(authState.uid, displayName, imageData);
     });
   }
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Camera } from '@ionic-native/camera';
+import { QuizPointsProvider } from '../../providers/quiz-points/quiz-points';
 
 /**
  * Generated class for the QuizUserHistoryPage page.
@@ -23,7 +24,7 @@ export class UserInfoPage {
   Picture;
   base64Image;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public cameraPlugin: Camera,) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public cameraPlugin: Camera, public quizPointsProvider: QuizPointsProvider) {
     this.base64Image = "./assets/imgs/user_m.png";
 
     this.displayname = "Fernando";
@@ -56,6 +57,10 @@ export class UserInfoPage {
       console.log("ERROR -> " + JSON.stringify(error));
     });
 
+  }
+
+  updateUser(){
+    this.quizPointsProvider.updateUserQuizInfo(this.displayname, this.base64Image);
   }
 
 }
