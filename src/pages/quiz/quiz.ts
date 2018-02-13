@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 import { QuizPointsProvider } from '../../providers/quiz-points/quiz-points';
 import { LocalStorageProvider } from '../../providers/local-storage/local-storage';
@@ -13,6 +13,8 @@ export class QuizPage {
 
   @ViewChild('slides') slides: any;
 
+  selectedColor: String = "danger";
+
   quizName: String;
   hasAnswered: boolean = false;
   score: number = 0;
@@ -22,6 +24,7 @@ export class QuizPage {
   questionsKeys: String[];
   answerKeys: String[] = ["answer1", "answer2", "answer3"];
   answerColor = "answer"
+  backgroundURL: String;
 
   userPoints;
 
@@ -33,8 +36,12 @@ export class QuizPage {
   private answerCorrectColor: string = 'answerCorrect';
   private answerIncorrectColor: string = 'answerIncorrect';
 
+  puntuationTableColors: String[] = ['answer', 'answer', 'answer', 'answer', 'answer', 'answer'];
+  selectedPuntuationItem: number = 0;
+
+
   constructor(public navCtrl: NavController, public dataService: DataProvider, private storage: Storage, params: NavParams,
-              public quizPointsProvider: QuizPointsProvider, public localStorageProvider: LocalStorageProvider) {
+              public quizPointsProvider: QuizPointsProvider, public localStorageProvider: LocalStorageProvider, public alertCtrl: AlertController) {
                 this.quizName = params.get('quizName');
   }
 
@@ -52,8 +59,9 @@ export class QuizPage {
         this.dataService.getQuizByName(this.quizName, this.userPoints.userActualVersion + 1).snapshotChanges().map(actions => {
           return actions.map(action => (action.payload.val()));
         }).subscribe(items => {
-            this.questions = items[0];
-            this.questionsKeys = Object.keys(items[0]);
+            this.backgroundURL = items[0];
+            this.questions = items[1];
+            this.questionsKeys = Object.keys(items[1]);
             this.percentegePerQuestion = 100 / this.questionsKeys.length;
           });
       });       
@@ -65,7 +73,7 @@ export class QuizPage {
     this.slides.lockSwipes(true);
   }
   
-  selectAnswer(answer, question){
+  selectAnswer(answer, question, index){
 
     answer.color = this.answerSelectedColor;
     setTimeout(() => {
@@ -76,6 +84,29 @@ export class QuizPage {
 
     if(answer.correct){
       this.score += 5;
+    }
+
+    if (index == this.questionsKeys.length - 1){
+
+      if (this.score >= 0 && this.score < 10) {
+        this.puntuationTableColors[0] = "danger";
+        this.selectedPuntuationItem = 0;
+      } else if (this.score >= 11 && this.score < 20) {
+        this.puntuationTableColors[1] = "danger";
+        this.selectedPuntuationItem = 1;
+      } else if (this.score >= 20 && this.score < 30) {
+        this.puntuationTableColors[2] = "danger";
+        this.selectedPuntuationItem = 2;
+      } else if (this.score >= 30 && this.score < 40) {
+        this.puntuationTableColors[3] = "danger";
+        this.selectedPuntuationItem = 3;
+      } else if (this.score >= 40 && this.score < 50) {
+        this.puntuationTableColors[4] = "danger";
+        this.selectedPuntuationItem = 4;
+      } else if (this.score == 50) {
+        this.puntuationTableColors[5] = "danger";
+        this.selectedPuntuationItem = 5;
+      }
     }
 
     setTimeout(() => {
@@ -102,6 +133,17 @@ export class QuizPage {
     }
 
     return rawAnswers;
+  }
+
+  showAlertPoints(selectedItem) {
+    if (selectedItem === this.selectedPuntuationItem) {
+      let alert = this.alertCtrl.create({
+        title: 'Mensaje del profesor ',
+        subTitle: "En privado te puedo decir algo más....no eres más tonto porque no tienes más tiempo",
+        buttons: ['OK']
+      });
+      alert.present();
+    }    
   }
 
   restartQuiz() {

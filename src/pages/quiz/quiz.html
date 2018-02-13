@@ -29,10 +29,10 @@
                   <h3>Pregunta {{i + 1}}</h3>
         
                   <flash-card [isFlipped]="questions[key].flashCardFlipped">
-                      <div class="flash-card-front">
+                      <div class="flash-card-front" [ngStyle]="{'background-image': 'url(' + backgroundURL + ')'}">
                         <p class="blackboardText">{{questions[key].question}}</p>
                       </div>
-                      <div class="flash-card-back">
+                      <div class="flash-card-back" [ngStyle]="{'background-image': 'url(' + backgroundURL + ')'}">
                         <p class="blackboardText">{{questions[key].correctAnswer}}</p>
                       </div>
                   </flash-card>
@@ -44,7 +44,7 @@
                       <ion-item class="label-rounded" *ngFor="let answerKey of answerKeys; let j = index;" [color]="questions[key].answers[answerKey].color">
                           <ion-badge class="answer-badge" item-start>{{j}}</ion-badge>  
                           <!-- <ion-label>{{i+1}}. {{answer.answer}}</ion-label> -->
-                          <ion-label (click)="selectAnswer(questions[key].answers[answerKey], questions[key])">{{questions[key].answers[answerKey].text}}</ion-label>
+                          <ion-label (click)="selectAnswer(questions[key].answers[answerKey], questions[key], i)">{{questions[key].answers[answerKey].text}}</ion-label>
                           <!-- <ion-radio (click)="selectAnswer(answer, question)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio> -->
                       </ion-item>
         
@@ -55,7 +55,57 @@
               <ion-slide>
                 <h2>Final Score: {{score}}</h2>
         
-                <button (click)="restartQuiz()" ion-button full color="primary">Start Again</button>       
+                <ion-list>
+                  <ion-item [color]="puntuationTableColors[0]" (click)="showAlertPoints(0)">
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/user_w.png">
+                    </ion-avatar>
+                    <h2>0 - 9 puntos</h2>
+                    <h3>Eres una desgracia humana, y me quedo corto</h3>
+                  </ion-item>
+
+                  <ion-item [color]="puntuationTableColors[1]" (click)="showAlertPoints(1)">
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/user_m.png">
+                    </ion-avatar>
+                    <h2>10 - 19 puntos</h2>
+                    <h3>Eres una desgracia, pero tienes arreglo</h3>
+                  </ion-item>
+
+                  <ion-item [color]="puntuationTableColors[2]" (click)="showAlertPoints(2)">
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/user_w.png">
+                    </ion-avatar>
+                    <h2>20 - 29 puntos</h2>
+                    <h3>Entre la desgracia y la maravilla</h3>
+                  </ion-item>
+
+                  <ion-item [color]="puntuationTableColors[3]" (click)="showAlertPoints(3)">
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/user_m.png">
+                    </ion-avatar>
+                    <h2>30 - 39 puntos</h2>
+                    <h3>De aquí se puede sacar algo bueno</h3>
+                  </ion-item>
+
+                  <ion-item [color]="puntuationTableColors[4]" (click)="showAlertPoints(4)">
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/user_w.png">
+                    </ion-avatar>
+                    <h2>40 - 49 puntos </h2>
+                    <h3>Eres todo un ejemplo</h3>
+                  </ion-item>
+
+                  <ion-item [color]="puntuationTableColors[5]" (click)="showAlertPoints(5)">
+                    <ion-avatar item-start>
+                      <img src="assets/imgs/user_w.png">
+                    </ion-avatar>
+                    <h2>50 puntos </h2>
+                    <h3>El amo de la galaxia !!!</h3>
+                  </ion-item>
+                </ion-list>
+
+                <button (click)="restartQuiz()" ion-button full color="greenBlackBoard">Volver</button>       
               </ion-slide>
         
           </ion-slides>
